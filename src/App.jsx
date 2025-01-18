@@ -1,16 +1,25 @@
 /** @format */
-const BASE = import.meta.env.VITE_BASE_URL;
+
+import { Route, Routes } from 'react-router-dom';
+import Login from './components/AuthForms/Login';
+import Register from './components/AuthForms/Register';
+
+/** @format */
 
 function App() {
 	return (
-		<>
-			<div>
-				<h1 className='text-3xl font-bold underline text-blue-500'>
-					Hello world!
-				</h1>
-				<p className='text-black'>{BASE}</p>
-			</div>
-		</>
+		<div className='flex flex-col h-screen w-screen'>
+			<Routes>
+				<Route
+					path='/signup'
+					element={<Register />}
+				/>
+				<Route
+					path='/'
+					element={<Login />}
+				/>
+			</Routes>
+		</div>
 	);
 }
 
