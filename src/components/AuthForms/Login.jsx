@@ -19,7 +19,6 @@ function Login() {
 
 	const onSubmit = (data) => {
 		console.log(data);
-		// TODO: Add API call to authenticate user
 	};
 
 	useEffect(() => {
@@ -77,7 +76,7 @@ function Login() {
 							placeholder='Enter username'
 							autoComplete='off'
 							{...register('username', { required: 'User name is required' })}
-							className='sm:px-[0.625rem] px-[0.75rem] lg:gap-[0.875rem] text-[#78829d] bg-[#fcfcfc] h-[2.5rem] border-[#dbdfe9] border rounded-md'
+							className='sm:px-[0.625rem] px-[0.75rem] lg:gap-[0.875rem] text-[#78829d] bg-[#fcfcfc] h-[2.5rem] border-[#dbdfe9] border rounded-md hover:ring-1 hover:ring-gray-500 focus:ring-1 focus:ring-[#056ee9] focus:outline-none  transition-all duration-200'
 						/>
 						{errors?.username && (
 							<span className='text-danger text-xs mt-1'>
@@ -86,7 +85,7 @@ function Login() {
 						)}
 					</div>
 
-					<div className='flex flex-col gap-1'>
+					<div className='flex flex-col gap-1 relative'>
 						<div className='flex justify-between items-center'>
 							<label className='text-[#071437] text-[0.8125rem] leading-[1.125rem] font-medium'>
 								Password
@@ -103,32 +102,32 @@ function Login() {
 							type={showPassword ? 'text' : 'password'}
 							placeholder='Enter password'
 							autoComplete='off'
-							{...register('email', { required: 'Password is required' })}
-							className='sm:px-[0.625rem] px-[0.75rem] lg:gap-[0.875rem] text-[#78829d] bg-[#fcfcfc] h-[2.5rem] border-[#dbdfe9] border rounded-md'
+							{...register('password', { required: 'Password is required' })}
+							className='sm:px-[0.625rem] px-[0.75rem] lg:gap-[0.875rem] text-[#78829d] bg-[#fcfcfc] h-10 border-[#dbdfe9] border rounded-md hover:ring-1  hover:ring-gray-500 focus:ring-1 focus:ring-[#056ee9] focus:outline-none transition-all duration-200'
 						/>
-						{errors?.email && (
+						{errors?.password && (
 							<span className='text-danger text-xs mt-1'>
-								{errors?.email?.message}
+								{errors?.password?.message}
 							</span>
 						)}
 						<button
-							className='btn btn-icon'
+							className='absolute right-0 top-[1.32rem] cursor-pointer leading-none rounded-md h-10 ps-4 pe-4 gap-1.5 border border-solid border-transparent font-medium text-[0.8125rem] outline-none btn-icon'
 							onClick={(e) => {
 								e.preventDefault();
 								setShowPassword(!showPassword);
 							}}
 						>
 							{showPassword ? (
-								<VisibilityIcon className='text-gray-500' />
+								<VisibilityIcon className='text-[#99a1b7] hover:text-gray-600' />
 							) : (
-								<VisibilityOffIcon className='text-gray-500' />
+								<VisibilityOffIcon className='text-[#99a1b7] hover:text-gray-600' />
 							)}
 						</button>
 					</div>
 
 					<button
 						type='submit'
-						className='xs:h-[1.75rem] xs:px-[0.5rem] xs:py-[0.35rem] xs:gap-[0.25rem] font-medium sm:h-[2rem] sm:px-[0.75rem] sm:py-[0.45rem] sm:gap-[0.275rem] py-[0.55rem] lg:h-[2.5rem] lg:px-[1.25rem] lg:py-[0.75rem] lg:gap-[0.5rem] flex justify-center grow text-[#fff] bg-[#1b84ff] leading-none rounded-md ps-4 pe-4'
+						className='xs:h-[1.75rem] xs:px-2 xs:py-[0.35rem] xs:gap-[0.25rem] font-medium sm:h-[2rem] sm:px-[0.75rem] sm:py-[0.45rem] sm:gap-[0.275rem] py-[0.55rem] lg:h-[2.5rem] lg:px-[1.25rem] lg:py-[0.75rem] lg:gap-2 flex justify-center grow text-[#fff] bg-[#1b84ff] hover:bg-blue-600 hover:shadow-[0_4px_12px_0_rgba(27,132,255,0.5)] transition-all duration-200 leading-none rounded-md ps-4 pe-4'
 						disabled={loading}
 					>
 						{loading ? 'Please wait...' : 'Sign In'}
