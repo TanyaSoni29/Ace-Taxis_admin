@@ -15,6 +15,10 @@ import ListAccount from './components/Accounts/Listaccounts';
 import ListDriver from './components/Drivers/ListDriver';
 import RegisterDriver from './components/Drivers/RegisterDriver';
 
+import CompanyConfig from './components/CompanyConfig/CompanyConfig';
+
+import AvailabilityLogs from './components/AvailabilityLogs/AvailabilityLogs';
+
 /** @format */
 
 function App() {
@@ -59,6 +63,17 @@ function App() {
 					path='/listdriver'
 					element={<ProtectedRoute element={<ListDriver />} />}
 				/>
+
+				<Route
+					path='/companyconfig'
+					element={<ProtectedRoute element={<CompanyConfig />} />}
+				/>
+
+				<Route
+					path='/availabilitylogs'
+					element={<ProtectedRoute element={<AvailabilityLogs />} />}
+				/>
+				
 			</Routes>
 		</div>
 	);
