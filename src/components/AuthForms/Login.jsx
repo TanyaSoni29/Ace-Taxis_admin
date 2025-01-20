@@ -2,12 +2,15 @@
 
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import bgImg from '../../assets/bg-10.png';
+import { login } from '../../service/operations/authApi';
 function Login() {
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
 	const { loading } = useSelector((state) => state.auth);
 	const {
 		register,
@@ -19,6 +22,9 @@ function Login() {
 
 	const onSubmit = (data) => {
 		console.log(data);
+		if (data?.username || data?.password) {
+			dispatch(login(data, navigate));
+		}
 	};
 
 	useEffect(() => {

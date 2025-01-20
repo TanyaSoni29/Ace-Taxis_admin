@@ -9,6 +9,7 @@ const initialState = {
 		: null,
 	isAuth: localStorage.getItem('token') ? true : false,
 	user: null,
+	getUser: null,
 };
 
 const authSlice = createSlice({
@@ -25,11 +26,15 @@ const authSlice = createSlice({
 		setUser(state, action) {
 			state.user = action.payload;
 		},
+		setGetUser(state, action) {
+			state.getUser = action.payload;
+		},
 		setIsAuth(state, action) {
 			state.isAuth = action.payload;
 		},
 	},
 });
 
-export const { setToken, setLoading, setUser, setIsAuth } = authSlice.actions;
+export const { setToken, setLoading, setUser, setGetUser, setIsAuth } =
+	authSlice.actions;
 export default authSlice.reducer;

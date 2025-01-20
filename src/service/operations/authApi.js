@@ -7,6 +7,7 @@ import {
 	setLoading,
 	setToken,
 	setUser,
+	setGetUser,
 } from '../../slices/authSlice';
 import { handleGetReq, handlePostReq, setHeaders } from '../apiRequestHandler';
 import { sendLogs } from '../../utils/getLogs';
@@ -49,8 +50,19 @@ export function login(data, navigate) {
 		console.log('LOGIN API RESPONSE.........', response);
 		if (response.status === 'success') {
 			toast.success('Login Successfully');
+			const user = {
+				userId: response?.userId,
+				fullName: response?.fullName,
+				username: data?.username,
+				isAdmin: response?.isAdmin,
+				regNo: response?.regNo,
+				roleId: response?.roleId,
+				type: response?.type,
+				value: response?.value,
+			};
 
 			dispatch(setToken(response.token));
+			dispatch(setUser(user));
 			dispatch(setIsAuth(true));
 			localStorage.setItem('token', JSON.stringify(response.token));
 
@@ -87,6 +99,7 @@ export function getUser(navigate) {
 			dispatch(setToken(null));
 			dispatch(setIsAuth(false));
 			dispatch(setUser(null));
+			dispatch(setGetUser(null));
 			navigate('/'); // Redirect to login
 			return;
 		}
@@ -98,7 +111,7 @@ export function getUser(navigate) {
 		console.log('GET ME API RESPONSE.........', response);
 
 		if (response.status === 'success') {
-			dispatch(setUser(response.data));
+			dispatch(setGetUser(response.data));
 			dispatch(setIsAuth(true));
 			sendLogs(
 				{
@@ -127,6 +140,7 @@ export function logout(navigate) {
 	return (dispatch) => {
 		dispatch(setToken(null));
 		dispatch(setUser(null));
+		dispatch(setGetUser(null));
 		dispatch(setIsAuth(false));
 		localStorage.removeItem('token');
 		toast.success('Logged Out');
