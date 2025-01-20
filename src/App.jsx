@@ -28,6 +28,8 @@ import ListAccount from './components/Accounts/Listaccounts';
 import ListDriver from './components/Drivers/ListDriver';
 import RegisterDriver from './components/Drivers/RegisterDriver';
 
+import Tariff from './components/Tariff/Tariff';
+
 import CompanyConfig from './components/CompanyConfig/CompanyConfig';
 
 /** @format */
@@ -76,6 +78,19 @@ function App() {
 				/>
 
 				<Route
+					path='/availability'
+					element={<ProtectedRoute element={<Availability />} />}
+				/>
+				<Route
+					path='/availabilitylogs'
+					element={<ProtectedRoute element={<AvailabilityLogs />} />}
+				/>
+				<Route
+					path='/availabilityreport'
+					element={<ProtectedRoute element={<AvailabilityReport />} />}
+				/>
+
+				<Route
 					path='/addpoi'
 					element={<ProtectedRoute element={<AddLocalPoi />} />}
 				/>
@@ -103,21 +118,13 @@ function App() {
 				/>
 
 				<Route
-					path='/companyconfig'
-					element={<ProtectedRoute element={<CompanyConfig />} />}
+					path='/tariff'
+					element={<ProtectedRoute element={<Tariff />} />}
 				/>
 
 				<Route
-					path='/availability'
-					element={<ProtectedRoute element={<Availability />} />}
-				/>
-				<Route
-					path='/availabilitylogs'
-					element={<ProtectedRoute element={<AvailabilityLogs />} />}
-				/>
-				<Route
-					path='/availabilityreport'
-					element={<ProtectedRoute element={<AvailabilityReport />} />}
+					path='/companyconfig'
+					element={<ProtectedRoute element={<CompanyConfig />} />}
 				/>
 			</Routes>
 		</div>
