@@ -6,6 +6,15 @@ import Register from './components/AuthForms/Register';
 import ProtectedRoute from './utils/ProtectedRoute';
 import Dashboard from './components/Dashboard/Dashboard';
 
+import AddLocalPoi from './components/LocalPoi/addpoi';
+import ListPoi from './components/LocalPoi/listpoi';
+
+import AddAccount from './components/Accounts/Addaccounts';
+import ListAccount from './components/Accounts/Listaccounts';
+
+import ListDriver from './components/Drivers/ListDriver';
+import RegisterDriver from './components/Drivers/RegisterDriver';
+
 /** @format */
 
 function App() {
@@ -23,6 +32,32 @@ function App() {
 				<Route
 					path='/dashboard'
 					element={<ProtectedRoute element={<Dashboard />} />}
+				/>
+				<Route
+					path='/addpoi'
+					element={<ProtectedRoute element={<AddLocalPoi />} />}
+				/>
+				<Route
+					path='/listpoi'
+					element={<ProtectedRoute element={<ListPoi />} />}
+				/>
+
+				<Route
+					path='/addaccounts'
+					element={<ProtectedRoute element={<AddAccount />} />}
+				/>
+				<Route
+					path='/listaccounts'
+					element={<ProtectedRoute element={<ListAccount />} />}
+				/>
+
+				<Route
+					path='/registerdriver'
+					element={<ProtectedRoute element={<RegisterDriver />} />}
+				/>
+				<Route
+					path='/listdriver'
+					element={<ProtectedRoute element={<ListDriver />} />}
 				/>
 			</Routes>
 		</div>

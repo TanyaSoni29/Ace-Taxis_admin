@@ -2,15 +2,12 @@
 
 import Sidebar from '../Sidebar/Sidebar';
 
-function Dashboard() {
+function ListPoi() {
 	return (
 		<div className=''>
 			<Sidebar />
-			{/* <div>
-				hiii
-			</div> */}
 		</div>
 	);
 }
 
-export default Dashboard;
+export default ListPoi;
