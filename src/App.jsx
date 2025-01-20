@@ -8,6 +8,17 @@ import Dashboard from './components/Dashboard/Dashboard';
 
 import NewBooking from './components/NewBooking/NewBooking';
 
+import AllocatedJobs from './components/Dispatch/AllocatedJobs';
+import CancelledJobs from './components/Dispatch/CancelledJobs';
+import CompletedJobs from './components/Dispatch/CompletedJobs';
+import UnallocatedJobs from './components/Dispatch/UnallocatedJobs';
+
+import Tracking from './components/Tracking/Tracking';
+
+import Availability from './components/Availability/Availability';
+import AvailabilityLogs from './components/AvailabilityLogs/AvailabilityLogs';
+import AvailabilityReport from './components/AvailabilityReport/AvailabilityReport';
+
 import AddLocalPoi from './components/LocalPoi/addpoi';
 import ListPoi from './components/LocalPoi/listpoi';
 
@@ -18,8 +29,6 @@ import ListDriver from './components/Drivers/ListDriver';
 import RegisterDriver from './components/Drivers/RegisterDriver';
 
 import CompanyConfig from './components/CompanyConfig/CompanyConfig';
-
-import AvailabilityLogs from './components/AvailabilityLogs/AvailabilityLogs';
 
 /** @format */
 
@@ -43,6 +52,29 @@ function App() {
 					path='/newbooking'
 					element={<ProtectedRoute element={<NewBooking />} />}
 				/>
+
+				<Route
+					path='/allocatedjobs'
+					element={<ProtectedRoute element={<AllocatedJobs />} />}
+				/>
+				<Route
+					path='/cancelledjobs'
+					element={<ProtectedRoute element={<CancelledJobs />} />}
+				/>
+				<Route
+					path='/completedjobs'
+					element={<ProtectedRoute element={<CompletedJobs />} />}
+				/>
+				<Route
+					path='/unallocatedjobs'
+					element={<ProtectedRoute element={<UnallocatedJobs />} />}
+				/>
+
+				<Route
+					path='/tracking'
+					element={<ProtectedRoute element={<Tracking />} />}
+				/>
+
 				<Route
 					path='/addpoi'
 					element={<ProtectedRoute element={<AddLocalPoi />} />}
@@ -76,8 +108,16 @@ function App() {
 				/>
 
 				<Route
+					path='/availability'
+					element={<ProtectedRoute element={<Availability />} />}
+				/>
+				<Route
 					path='/availabilitylogs'
 					element={<ProtectedRoute element={<AvailabilityLogs />} />}
+				/>
+				<Route
+					path='/availabilityreport'
+					element={<ProtectedRoute element={<AvailabilityReport />} />}
 				/>
 			</Routes>
 		</div>
