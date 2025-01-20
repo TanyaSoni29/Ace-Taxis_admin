@@ -6,6 +6,8 @@ import Register from './components/AuthForms/Register';
 import ProtectedRoute from './utils/ProtectedRoute';
 import Dashboard from './components/Dashboard/Dashboard';
 
+import NewBooking from './components/NewBooking/NewBooking';
+
 import AddLocalPoi from './components/LocalPoi/addpoi';
 import ListPoi from './components/LocalPoi/listpoi';
 
@@ -36,6 +38,10 @@ function App() {
 				<Route
 					path='/dashboard'
 					element={<ProtectedRoute element={<Dashboard />} />}
+				/>
+				<Route
+					path='/newbooking'
+					element={<ProtectedRoute element={<NewBooking />} />}
 				/>
 				<Route
 					path='/addpoi'
@@ -73,7 +79,6 @@ function App() {
 					path='/availabilitylogs'
 					element={<ProtectedRoute element={<AvailabilityLogs />} />}
 				/>
-				
 			</Routes>
 		</div>
 	);
