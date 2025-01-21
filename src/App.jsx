@@ -176,7 +176,7 @@ function App() {
 					element={<ProtectedRoute element={<StatementProcessing />} />}
 				/>
 				<Route
-					path='/vatoutput'
+					path='/vatoutputs'
 					element={<ProtectedRoute element={<VatOutput />} />}
 				/>
 
