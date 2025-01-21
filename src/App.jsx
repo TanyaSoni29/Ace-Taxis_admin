@@ -40,6 +40,7 @@ import InvoiceHistory from './components/Billing&Payments/Account/InvoiceHistory
 import InvoiceProcessor from './components/Billing&Payments/Account/InvoiceProcessor';
 import StatementHistory from './components/Billing&Payments/Driver/StatementHistory';
 import StatementProcessing from './components/Billing&Payments/Driver/StatementProcessing';
+import VatOutput from './components/Billing&Payments/VatOutput';
 
 import DriverEarningsReport from './components/DriverEarningReport/DriverEarningsReport';
 
@@ -173,6 +174,10 @@ function App() {
 				<Route
 					path='/statementprocessing'
 					element={<ProtectedRoute element={<StatementProcessing />} />}
+				/>
+				<Route
+					path='/vatoutput'
+					element={<ProtectedRoute element={<VatOutput />} />}
 				/>
 
 				<Route
