@@ -208,7 +208,7 @@ function Sidebar() {
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
-											to=''
+											to='/newbooking'
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 												location.pathname === '/newbooking'
 													? 'bg-[#f9f9f9] rounded-lg'
@@ -235,7 +235,7 @@ function Sidebar() {
 									</div>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
-											to=''
+											to='/search-bookings'
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 												location.pathname === '/search-bookings'
 													? 'bg-[#f9f9f9] rounded-lg'
@@ -262,7 +262,7 @@ function Sidebar() {
 									</div>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
-											to=''
+											to='/audit-bookings'
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 												location.pathname === '/audit-bookings'
 													? 'bg-[#f9f9f9] rounded-lg'
@@ -289,7 +289,7 @@ function Sidebar() {
 									</div>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
-											to=''
+											to='/airport-runs'
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 												location.pathname === '/airport-runs'
 													? 'bg-[#f9f9f9] rounded-lg'
@@ -316,7 +316,7 @@ function Sidebar() {
 									</div>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
-											to=''
+											to='/card-bookings'
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 												location.pathname === '/card-bookings'
 													? 'bg-[#f9f9f9] rounded-lg'
@@ -379,7 +379,7 @@ function Sidebar() {
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
-											to=''
+											to='/unallocatedjobs'
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 												location.pathname === '/unallocatedjobs'
 													? 'bg-[#f9f9f9] rounded-lg'
@@ -406,7 +406,7 @@ function Sidebar() {
 									</div>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
-											to=''
+											to='/allocatedjobs'
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 												location.pathname === '/allocatedjobs'
 													? 'bg-[#f9f9f9] rounded-lg'
@@ -433,7 +433,7 @@ function Sidebar() {
 									</div>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
-											to=''
+											to='/cancelledjobs'
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 												location.pathname === '/cancelledjobs'
 													? 'bg-[#f9f9f9] rounded-lg'
@@ -460,7 +460,7 @@ function Sidebar() {
 									</div>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
-											to=''
+											to='/completedjobs'
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 												location.pathname === '/completedjobs'
 													? 'bg-[#f9f9f9] rounded-lg'
@@ -523,7 +523,7 @@ function Sidebar() {
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
-											to=''
+											to='/add-localPoi'
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 												location.pathname === '/add-localPoi'
 													? 'bg-[#f9f9f9] rounded-lg'
@@ -550,7 +550,7 @@ function Sidebar() {
 									</div>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
-											to=''
+											to='/list-localPoi'
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 												location.pathname === '/list-localPoi'
 													? 'bg-[#f9f9f9] rounded-lg'
@@ -613,7 +613,7 @@ function Sidebar() {
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
-											to=''
+											to='/add-accounts'
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 												location.pathname === '/add-accounts'
 													? 'bg-[#f9f9f9] rounded-lg'
@@ -640,7 +640,7 @@ function Sidebar() {
 									</div>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
-											to=''
+											to='/list-accounts'
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 												location.pathname === '/list-accounts'
 													? 'bg-[#f9f9f9] rounded-lg'
@@ -703,7 +703,7 @@ function Sidebar() {
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
-											to=''
+											to='/register-driver'
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 												location.pathname === '/register-driver'
 													? 'bg-[#f9f9f9] rounded-lg'
@@ -730,7 +730,7 @@ function Sidebar() {
 									</div>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
-											to=''
+											to='/list-drivers'
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 												location.pathname === '/list-drivers'
 													? 'bg-[#f9f9f9] rounded-lg'
@@ -761,7 +761,7 @@ function Sidebar() {
 						<div className='p-0 m-0'>
 							<div className='p-0 m-0 flex flex-col'>
 								<Link
-									to=''
+									to='/tracking'
 									className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 										location.pathname === '/tracking'
 											? 'bg-[#f9f9f9] rounded-lg'
@@ -789,7 +789,7 @@ function Sidebar() {
 
 							<div className='p-0 m-0 flex flex-col'>
 								<Link
-									to=''
+									to='/availability'
 									className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 										location.pathname === '/availability'
 											? 'bg-[#f9f9f9] rounded-lg'
@@ -817,7 +817,7 @@ function Sidebar() {
 
 							<div className='p-0 m-0 flex flex-col'>
 								<Link
-									to=''
+									to='/availability-logs'
 									className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 										location.pathname === '/availability-logs'
 											? 'bg-[#f9f9f9] rounded-lg'
@@ -919,7 +919,7 @@ function Sidebar() {
 																? 'bg-[#f9f9f9] rounded-lg'
 																: 'hover:bg-[#f9f9f9] hover:rounded-lg'
 														} gap-[14px] ps-[10px] pe-[10px] py-[8px]`}
-														to=''
+														to='/statement'
 													>
 														<span
 															className={`items-center flex-shrink-0 flex w-[6px] -start-[3px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-y-1/2 ${
@@ -946,7 +946,7 @@ function Sidebar() {
 																? 'bg-[#f9f9f9] rounded-lg'
 																: 'hover:bg-[#f9f9f9] hover:rounded-lg'
 														} gap-[14px] ps-[10px] pe-[10px] py-[8px]`}
-														to=''
+														to='/statement-history'
 													>
 														<span
 															className={`items-center flex-shrink-0 flex w-[6px] -start-[3px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-y-1/2 ${
@@ -1163,7 +1163,7 @@ function Sidebar() {
 																? 'bg-[#f9f9f9] rounded-lg'
 																: 'hover:bg-[#f9f9f9] hover:rounded-lg'
 														} gap-[14px] ps-[10px] pe-[10px] py-[8px]`}
-														to=''
+														to='/account-invoice'
 													>
 														<span
 															className={`items-center flex-shrink-0 flex w-[6px] -start-[3px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-y-1/2 ${
@@ -1190,7 +1190,7 @@ function Sidebar() {
 																? 'bg-[#f9f9f9] rounded-lg'
 																: 'hover:bg-[#f9f9f9] hover:rounded-lg'
 														} gap-[14px] ps-[10px] pe-[10px] py-[8px]`}
-														to=''
+														to='/invoice-history'
 													>
 														<span
 															className={`items-center flex-shrink-0 flex w-[6px] -start-[3px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-y-1/2 ${
@@ -1217,7 +1217,7 @@ function Sidebar() {
 																? 'bg-[#f9f9f9] rounded-lg'
 																: 'hover:bg-[#f9f9f9] hover:rounded-lg'
 														} gap-[14px] ps-[10px] pe-[10px] py-[8px]`}
-														to=''
+														to='/invoice-delete'
 													>
 														<span
 															className={`items-center flex-shrink-0 flex w-[6px] -start-[3px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-y-1/2 ${
@@ -1399,7 +1399,7 @@ function Sidebar() {
 													? 'bg-[#f9f9f9] rounded-lg'
 													: 'hover:bg-[#f9f9f9] hover:rounded-lg'
 											} gap-[14px] ps-[10px] pe-[10px] py-[8px]`}
-											to=''
+											to='/vat-outputs'
 										>
 											<span
 												className={`items-center flex-shrink-0 flex w-[6px] -start-[3px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-y-1/2 ${
@@ -1425,7 +1425,7 @@ function Sidebar() {
 
 						<div className='p-0 m-0 flex flex-col'>
 							<Link
-								to=''
+								to='/tariffs'
 								className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 									location.pathname === '/tariffs'
 										? 'bg-[#f9f9f9] rounded-lg'
@@ -1491,7 +1491,7 @@ function Sidebar() {
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
-											to=''
+											to='/availability-reports'
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 												location.pathname === '/availability-reports'
 													? 'bg-[#f9f9f9] rounded-lg'
@@ -1518,7 +1518,7 @@ function Sidebar() {
 									</div>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
-											to=''
+											to='/driver-earning-report'
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 												location.pathname === '/driver-earning-report'
 													? 'bg-[#f9f9f9] rounded-lg'
@@ -1588,7 +1588,7 @@ function Sidebar() {
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
-											to=''
+											to='/company-settings'
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 												location.pathname === '/company-settings'
 													? 'bg-[#f9f9f9] rounded-lg'
@@ -1616,7 +1616,7 @@ function Sidebar() {
 
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
-											to=''
+											to='/msg-settings'
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 												location.pathname === '/msg-settings'
 													? 'bg-[#f9f9f9] rounded-lg'
