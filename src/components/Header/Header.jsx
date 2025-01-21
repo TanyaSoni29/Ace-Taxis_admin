@@ -1,38 +1,44 @@
 /** @format */
 
-import { Link } from 'react-router-dom';
-import SearchIcon from '@mui/icons-material/Search';
-import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
-import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
-import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined';
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import { getpathname } from '../../utils/getpathfullname';
 
 function Header() {
-	return (
-		<div className='h-[70px] flex items-center justify-between bg-white px-4 border-b border-gray-200'>
-			{/* Breadcrumb */}
-			<div className='flex items-center gap-2 text-sm text-gray-500'>
-				<Link
-					to='/'
-					className='hover:underline text-blue-500'
-				>
-					Public Profile
-				</Link>
-				<span>{`>`}</span>
-				<span className='text-gray-700'>Profiles</span>
-			</div>
+	const location = useLocation();
 
-			{/* Icons and Profile */}
-			<div className='flex items-center gap-4'>
-				<SearchIcon className='text-gray-500 hover:text-blue-500 cursor-pointer' />
-				<ChatBubbleOutlineIcon className='text-gray-500 hover:text-blue-500 cursor-pointer' />
-				<GridViewOutlinedIcon className='text-gray-500 hover:text-blue-500 cursor-pointer' />
-				<CalendarTodayOutlinedIcon className='text-gray-500 hover:text-blue-500 cursor-pointer' />
-				<div className='relative w-8 h-8'>
-					<img
-						src='https://via.placeholder.com/40'
-						alt='Profile'
-						className='rounded-full border-2 border-green-500'
-					/>
+	const [pathname, setPathname] = useState({});
+
+	useEffect(() => {
+		const path = getpathname(location);
+		setPathname(path);
+		// eslint-disable-next-line
+	}, []);
+
+	return (
+		<div className='flex items-center fixed z-10 top-0 start-0 end-0 shrink-0 bg-[#fefefe] h-[70px]'>
+			<div className='xl:ms-auto xl:me-auto xl:ps-[1.875rm] xl:pe-[1.875rem] xl:max-w-[1280px] lg:gap-1 flex grow items-stretch justify-between flex-wrap gap-3'>
+				{/* Breadcrumb */}
+				<div className='flex items-center gap-2 text-sm text-gray-500'>
+					<div className='text-blue-500'>{pathname?.one}</div>
+					{pathname?.two && <span>{`>`}</span>}
+					{pathname?.two && (
+						<span className='text-gray-700'>{pathname?.two}</span>
+					)}
+					{pathname?.three && <span>{`>`}</span>}
+					{pathname?.three && (
+						<span className='text-gray-700'>{pathname?.three}</span>
+					)}
+				</div>
+				{/* Icons and Profile */}
+				<div className='flex items-center gap-4'>
+					<div className='relative w-8 h-8'>
+						<img
+							src='https://via.placeholder.com/40'
+							alt='Profile'
+							className='rounded-full border-2 border-green-500'
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
