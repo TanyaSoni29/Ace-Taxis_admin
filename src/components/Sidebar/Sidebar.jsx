@@ -6,7 +6,6 @@ import KeyboardTabIcon from '@mui/icons-material/KeyboardTab';
 import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
-import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import DirectionsCarFilledOutlinedIcon from '@mui/icons-material/DirectionsCarFilledOutlined';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
 import PersonPinCircleOutlinedIcon from '@mui/icons-material/PersonPinCircleOutlined';
@@ -211,21 +210,21 @@ function Sidebar() {
 										<Link
 											to=''
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
-												location.pathname === '/bookings'
+												location.pathname === '/newbooking'
 													? 'bg-[#f9f9f9] rounded-lg'
 													: 'hover:bg-[#f9f9f9] hover:rounded-lg'
 											} gap-[14px] ps-[10px] pe-[10px] py-[8px]`}
 										>
 											<span
 												className={`items-center flex-shrink-0 flex w-[6px] -start-[3px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-y-1/2 ${
-													location.pathname === '/bookings'
+													location.pathname === '/newbooking'
 														? 'before:bg-[#006ae6]'
 														: 'hover:before:bg-[#006ae6]'
 												}`}
 											></span>
 											<span
 												className={`flex items-center flex-grow text-[0.8125rem] leading-[1.125rem] font-normal ${
-													location.pathname === '/bookings'
+													location.pathname === '/newbooking'
 														? 'text-[#1b84ff] font-semibold'
 														: 'hover:!text-[#1b84ff] text-[#252F4A]'
 												}`}
@@ -382,21 +381,21 @@ function Sidebar() {
 										<Link
 											to=''
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
-												location.pathname === '/unallocated-jobs'
+												location.pathname === '/unallocatedjobs'
 													? 'bg-[#f9f9f9] rounded-lg'
 													: 'hover:bg-[#f9f9f9] hover:rounded-lg'
 											} gap-[14px] ps-[10px] pe-[10px] py-[8px]`}
 										>
 											<span
 												className={`items-center flex-shrink-0 flex w-[6px] -start-[3px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-y-1/2 ${
-													location.pathname === '/unallocated-jobs'
+													location.pathname === '/unallocatedjobs'
 														? 'before:bg-[#006ae6]'
 														: 'hover:before:bg-[#006ae6]'
 												}`}
 											></span>
 											<span
 												className={`flex items-center flex-grow text-[0.8125rem] leading-[1.125rem] font-normal ${
-													location.pathname === '/unallocated-jobs'
+													location.pathname === '/unallocatedjobs'
 														? 'text-[#1b84ff] font-semibold'
 														: 'hover:!text-[#1b84ff] text-[#252F4A]'
 												}`}
@@ -409,21 +408,21 @@ function Sidebar() {
 										<Link
 											to=''
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
-												location.pathname === '/allocated-jobs'
+												location.pathname === '/allocatedjobs'
 													? 'bg-[#f9f9f9] rounded-lg'
 													: 'hover:bg-[#f9f9f9] hover:rounded-lg'
 											} gap-[14px] ps-[10px] pe-[10px] py-[8px]`}
 										>
 											<span
 												className={`items-center flex-shrink-0 flex w-[6px] -start-[3px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-y-1/2 ${
-													location.pathname === '/allocated-jobs'
+													location.pathname === '/allocatedjobs'
 														? 'before:bg-[#006ae6]'
 														: 'hover:before:bg-[#006ae6]'
 												}`}
 											></span>
 											<span
 												className={`flex items-center flex-grow text-[0.8125rem] leading-[1.125rem] font-normal ${
-													location.pathname === '/allocated-jobs'
+													location.pathname === '/allocatedjobs'
 														? 'text-[#1b84ff] font-semibold'
 														: 'hover:!text-[#1b84ff] text-[#252F4A]'
 												}`}
@@ -436,21 +435,21 @@ function Sidebar() {
 										<Link
 											to=''
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
-												location.pathname === '/cancelled-jobs'
+												location.pathname === '/cancelledjobs'
 													? 'bg-[#f9f9f9] rounded-lg'
 													: 'hover:bg-[#f9f9f9] hover:rounded-lg'
 											} gap-[14px] ps-[10px] pe-[10px] py-[8px]`}
 										>
 											<span
 												className={`items-center flex-shrink-0 flex w-[6px] -start-[3px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-y-1/2 ${
-													location.pathname === '/cancelled-jobs'
+													location.pathname === '/cancelledjobs'
 														? 'before:bg-[#006ae6]'
 														: 'hover:before:bg-[#006ae6]'
 												}`}
 											></span>
 											<span
 												className={`flex items-center flex-grow text-[0.8125rem] leading-[1.125rem] font-normal ${
-													location.pathname === '/cancelled-jobs'
+													location.pathname === '/cancelledjobs'
 														? 'text-[#1b84ff] font-semibold'
 														: 'hover:!text-[#1b84ff] text-[#252F4A]'
 												}`}
@@ -463,21 +462,21 @@ function Sidebar() {
 										<Link
 											to=''
 											className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
-												location.pathname === '/completed-jobs'
+												location.pathname === '/completedjobs'
 													? 'bg-[#f9f9f9] rounded-lg'
 													: 'hover:bg-[#f9f9f9] hover:rounded-lg'
 											} gap-[14px] ps-[10px] pe-[10px] py-[8px]`}
 										>
 											<span
 												className={`items-center flex-shrink-0 flex w-[6px] -start-[3px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-y-1/2 ${
-													location.pathname === '/completed-jobs'
+													location.pathname === '/completedjobs'
 														? 'before:bg-[#006ae6]'
 														: 'hover:before:bg-[#006ae6]'
 												}`}
 											></span>
 											<span
 												className={`flex items-center flex-grow text-[0.8125rem] leading-[1.125rem] font-normal ${
-													location.pathname === '/completed-jobs'
+													location.pathname === '/completedjobs'
 														? 'text-[#1b84ff] font-semibold'
 														: 'hover:!text-[#1b84ff] text-[#252F4A]'
 												}`}
