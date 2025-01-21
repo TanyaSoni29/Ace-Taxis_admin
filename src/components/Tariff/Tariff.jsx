@@ -14,6 +14,8 @@ import {
 } from '@mui/material';
 import { ArrowDropUp, ArrowDropDown } from '@mui/icons-material';
 
+/** @format */
+
 const Tariff = () => {
 	const [rows, setRows] = useState([
 		{
@@ -35,7 +37,8 @@ const Tariff = () => {
 		{
 			id: 3,
 			name: 'Tariff 3 : Day Rate',
-			description: 'Chargeable on Christmas Day, Boxing Day, and New Year.',
+			description:
+				'Chargeable on Christmas Day, Boxing Day, and New Year.',
 			initialCharge: 0,
 			firstMileCharge: 8.8,
 			additionalMileCharge: 5.6,
@@ -61,97 +64,124 @@ const Tariff = () => {
 	};
 
 	return (
-		<div className='flex-1 p-6 bg-gray-100'>
-			{/* Header */}
-			<h1 className='text-2xl font-semibold mb-4'>Tariff Configuration</h1>
+		<div className="flex h-screen bg-gray-50">
+			{/* Sidebar */}
+			<div className="w-80 bg-white shadow-lg border-r">
+				{/* Add Sidebar Component if required */}
+			</div>
 
-			{/* Table */}
-			<TableContainer
-				component={Paper}
-				className='w-full'
-			>
-				<Table>
-					<TableHead>
-						<TableRow>
-							<TableCell>Name</TableCell>
-							<TableCell>Description</TableCell>
-							<TableCell>Initial Charge</TableCell>
-							<TableCell>First Mile Charge</TableCell>
-							<TableCell>Additional Mile Charge</TableCell>
-						</TableRow>
-					</TableHead>
-					<TableBody>
-						{rows.map((row) => (
-							<TableRow key={row.id}>
-								<TableCell>{row.name}</TableCell>
-								<TableCell>{row.description}</TableCell>
-								<TableCell>
-									<div className='flex items-center space-x-1'>
-										<IconButton
-											onClick={() => handleIncrement(row.id, 'initialCharge')}
-										>
-											<ArrowDropUp />
-										</IconButton>
-										<span>{row.initialCharge}</span>
-										<IconButton
-											onClick={() => handleDecrement(row.id, 'initialCharge')}
-										>
-											<ArrowDropDown />
-										</IconButton>
-									</div>
-								</TableCell>
-								<TableCell>
-									<div className='flex items-center space-x-1'>
-										<IconButton
-											onClick={() => handleIncrement(row.id, 'firstMileCharge')}
-										>
-											<ArrowDropUp />
-										</IconButton>
-										<span>{row.firstMileCharge.toFixed(1)}</span>
-										<IconButton
-											onClick={() => handleDecrement(row.id, 'firstMileCharge')}
-										>
-											<ArrowDropDown />
-										</IconButton>
-									</div>
-								</TableCell>
-								<TableCell>
-									<div className='flex items-center space-x-1'>
-										<IconButton
-											onClick={() =>
-												handleIncrement(row.id, 'additionalMileCharge')
-											}
-										>
-											<ArrowDropUp />
-										</IconButton>
-										<span>{row.additionalMileCharge.toFixed(1)}</span>
-										<IconButton
-											onClick={() =>
-												handleDecrement(row.id, 'additionalMileCharge')
-											}
-										>
-											<ArrowDropDown />
-										</IconButton>
-									</div>
-								</TableCell>
-							</TableRow>
-						))}
-					</TableBody>
-				</Table>
-			</TableContainer>
+			{/* Main Content */}
+			<div className="flex-1 p-6 space-y-6">
+				{/* Header */}
+				<div className="bg-white shadow rounded-lg p-4">
+					<h1 className="text-2xl font-semibold">Tariff Configuration</h1>
+				</div>
 
-			{/* Update Button */}
-			<div className='mt-4'>
-				<Button
-					variant='contained'
-					color='primary'
-					className='capitalize'
-				>
-					Update Tariff
-				</Button>
+				{/* Table */}
+				<div className="bg-white shadow rounded-lg p-4">
+					<TableContainer component={Paper}>
+						<Table>
+							<TableHead>
+								<TableRow>
+									<TableCell className="font-semibold">Name</TableCell>
+									<TableCell className="font-semibold">Description</TableCell>
+									<TableCell className="font-semibold">
+										Initial Charge
+									</TableCell>
+									<TableCell className="font-semibold">
+										First Mile Charge
+									</TableCell>
+									<TableCell className="font-semibold">
+										Additional Mile Charge
+									</TableCell>
+								</TableRow>
+							</TableHead>
+							<TableBody>
+								{rows.map((row) => (
+									<TableRow key={row.id}>
+										<TableCell>{row.name}</TableCell>
+										<TableCell>{row.description}</TableCell>
+										<TableCell>
+											<div className="flex items-center space-x-1">
+												<IconButton
+													onClick={() =>
+														handleIncrement(row.id, 'initialCharge')
+													}
+												>
+													<ArrowDropUp />
+												</IconButton>
+												<span>{row.initialCharge}</span>
+												<IconButton
+													onClick={() =>
+														handleDecrement(row.id, 'initialCharge')
+													}
+												>
+													<ArrowDropDown />
+												</IconButton>
+											</div>
+										</TableCell>
+										<TableCell>
+											<div className="flex items-center space-x-1">
+												<IconButton
+													onClick={() =>
+														handleIncrement(row.id, 'firstMileCharge')
+													}
+												>
+													<ArrowDropUp />
+												</IconButton>
+												<span>{row.firstMileCharge.toFixed(1)}</span>
+												<IconButton
+													onClick={() =>
+														handleDecrement(row.id, 'firstMileCharge')
+													}
+												>
+													<ArrowDropDown />
+												</IconButton>
+											</div>
+										</TableCell>
+										<TableCell>
+											<div className="flex items-center space-x-1">
+												<IconButton
+													onClick={() =>
+														handleIncrement(row.id, 'additionalMileCharge')
+													}
+												>
+													<ArrowDropUp />
+												</IconButton>
+												<span>{row.additionalMileCharge.toFixed(1)}</span>
+												<IconButton
+													onClick={() =>
+														handleDecrement(
+															row.id,
+															'additionalMileCharge'
+														)
+													}
+												>
+													<ArrowDropDown />
+												</IconButton>
+											</div>
+										</TableCell>
+									</TableRow>
+								))}
+							</TableBody>
+						</Table>
+					</TableContainer>
+				</div>
+
+				{/* Update Button */}
+				<div className="flex justify-end">
+					<Button
+						variant="contained"
+						color="primary"
+						className="capitalize"
+					>
+						Update Tariff
+					</Button>
+				</div>
 			</div>
 		</div>
 	);
 };
 
 export default Tariff;
+
