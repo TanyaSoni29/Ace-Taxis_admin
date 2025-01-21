@@ -98,100 +98,100 @@ function App() {
 					element={<ProtectedRoute element={<Availability />} />}
 				/>
 				<Route
-					path='/availabilitylogs'
+					path='/availability-logs'
 					element={<ProtectedRoute element={<AvailabilityLogs />} />}
 				/>
 				<Route
-					path='/availabilityreport'
+					path='/availability-reports'
 					element={<ProtectedRoute element={<AvailabilityReport />} />}
 				/>
 
 				<Route
-					path='/addpoi'
+					path='/add-localPoi'
 					element={<ProtectedRoute element={<AddLocalPoi />} />}
 				/>
 				<Route
-					path='/listpoi'
+					path='/list-localPoi'
 					element={<ProtectedRoute element={<ListPoi />} />}
 				/>
 
 				<Route
-					path='bookingsearch'
+					path='search-bookings'
 					element={<ProtectedRoute element={<BookingSearch />} />}
 				/>
 				<Route
-					path='auditview'
+					path='audit-bookings'
 					element={<ProtectedRoute element={<AuditView />} />}
 				/>
 				<Route
-					path='airportruns'
+					path='airport-runs'
 					element={<ProtectedRoute element={<AirportRuns />} />}
 				/>
 				<Route
-					path='cardbooking'
+					path='card-bookings'
 					element={<ProtectedRoute element={<CardBooking />} />}
 				/>
 
 				<Route
-					path='/addaccounts'
+					path='/add-accounts'
 					element={<ProtectedRoute element={<AddAccount />} />}
 				/>
 				<Route
-					path='/listaccounts'
+					path='/list-accounts'
 					element={<ProtectedRoute element={<ListAccount />} />}
 				/>
 
 				<Route
-					path='/registerdriver'
+					path='/register-driver'
 					element={<ProtectedRoute element={<RegisterDriver />} />}
 				/>
 				<Route
-					path='/listdriver'
+					path='/list-drivers'
 					element={<ProtectedRoute element={<ListDriver />} />}
 				/>
 
 				<Route
-					path='/tariff'
+					path='/tariffs'
 					element={<ProtectedRoute element={<Tariff />} />}
 				/>
 
 				<Route
-					path='/invoicedelete'
+					path='/invoice-delete'
 					element={<ProtectedRoute element={<InvoiceDelete />} />}
 				/>
 				<Route
-					path='/invoicehistory'
+					path='/invoice-history'
 					element={<ProtectedRoute element={<InvoiceHistory />} />}
 				/>
 				<Route
-					path='/invoiceprocessor'
+					path='/account-invoice'
 					element={<ProtectedRoute element={<InvoiceProcessor />} />}
 				/>
 				<Route
-					path='/statementhistory'
+					path='/statement-history'
 					element={<ProtectedRoute element={<StatementHistory />} />}
 				/>
 				<Route
-					path='/statementprocessing'
+					path='/statement'
 					element={<ProtectedRoute element={<StatementProcessing />} />}
 				/>
 				<Route
-					path='/vatoutputs'
+					path='/vat-outputs'
 					element={<ProtectedRoute element={<VatOutput />} />}
 				/>
 
 				<Route
-					path='/driverearningsreport'
+					path='/driver-earning-report'
 					element={<ProtectedRoute element={<DriverEarningsReport />} />}
 				/>
 
 				<Route
-					path='/companyconfig'
+					path='/company-settings'
 					element={<ProtectedRoute element={<CompanyConfig />} />}
 				/>
 
 				<Route
-					path='/messageconfig'
+					path='/msg-settings'
 					element={<ProtectedRoute element={<MessageConfig />} />}
 				/>
 			</Routes>
