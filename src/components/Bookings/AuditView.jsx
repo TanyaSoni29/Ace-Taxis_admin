@@ -22,13 +22,13 @@ const AuditView = () => {
   return (
     <div className="flex h-screen">
       {/* Sidebar */}
-      <div className="w-80 bg-white border-r">
+      <div className="w-72 bg-white border-r">
         <Sidebar />
       </div>
 
       {/* Main Content */}
       <div className="flex-1 p-6 bg-gray-100 flex justify-center">
-        <div className="w-full max-w-5xl">
+        <div className="w-full max-w-6xl">
           {/* Header */}
           <h1 className="text-2xl font-semibold mb-4">
             Change Log of Booking #:
@@ -40,7 +40,7 @@ const AuditView = () => {
               label="Booking #"
               variant="outlined"
               size="small"
-              className="w-1/3"
+              className="w-1/4"
             />
             <Button
               variant="contained"
@@ -53,7 +53,7 @@ const AuditView = () => {
           </div>
 
           {/* Data Table */}
-          <Paper sx={{ height: 400, width: "100%" }}>
+          <Paper sx={{ height: 450, width: "100%" }}>
             <DataGrid
               rows={rows}
               columns={columns}
