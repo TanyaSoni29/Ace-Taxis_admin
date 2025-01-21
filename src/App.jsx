@@ -47,21 +47,22 @@ import DriverEarningsReport from './components/DriverEarningReport/DriverEarning
 import CompanyConfig from './components/CompanyConfig/CompanyConfig';
 
 import MessageConfig from './components/MessageConfig/MessageConfig';
+import Layout from './Layout';
 
 /** @format */
 
 function App() {
 	return (
-		<div className='flex flex-col h-screen w-screen'>
-			<Routes>
-				<Route
-					path='/signup'
-					element={<Register />}
-				/>
-				<Route
-					path='/'
-					element={<Login />}
-				/>
+		<Routes>
+			<Route
+				path='/signup'
+				element={<Register />}
+			/>
+			<Route
+				path='/'
+				element={<Login />}
+			/>
+			<Route element={<Layout />}>
 				<Route
 					path='/dashboard'
 					element={<ProtectedRoute element={<Dashboard />} />}
@@ -194,8 +195,8 @@ function App() {
 					path='/msg-settings'
 					element={<ProtectedRoute element={<MessageConfig />} />}
 				/>
-			</Routes>
-		</div>
+			</Route>
+		</Routes>
 	);
 }
 

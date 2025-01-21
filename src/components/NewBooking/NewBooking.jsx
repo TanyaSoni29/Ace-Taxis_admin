@@ -1,11 +1,8 @@
 /** @format */
 
-import Sidebar from '../Sidebar/Sidebar';
-
 const NewBooking = () => {
 	return (
 		<div className='flex'>
-			<Sidebar />
 			<div className='flex-grow p-8 bg-gray-50 min-h-screen'>
 				<div className='max-w-7xl mx-auto bg-white shadow-md rounded-md p-6'>
 					<h2 className='text-2xl font-bold text-gray-700 mb-6'>
