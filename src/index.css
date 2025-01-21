@@ -3,3 +3,135 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* General scrollable container styles */
+.scrollable,
+.scrollable-y,
+.scrollable-x,
+.scrollable-hover,
+.scrollable-y-hover,
+.scrollable-x-hover,
+.scrollable-auto,
+.scrollable-y-auto,
+.scrollable-x-auto {
+	scrollbar-width: thin; /* Thin scrollbar for non-WebKit browsers */
+	scrollbar-color: transparent transparent; /* Default hidden scrollbars */
+	position: relative;
+}
+
+/* WebKit-based scrollbars */
+.scrollable::-webkit-scrollbar,
+.scrollable-y::-webkit-scrollbar,
+.scrollable-x::-webkit-scrollbar,
+.scrollable-hover::-webkit-scrollbar,
+.scrollable-y-hover::-webkit-scrollbar,
+.scrollable-x-hover::-webkit-scrollbar,
+.scrollable-auto::-webkit-scrollbar,
+.scrollable-y-auto::-webkit-scrollbar,
+.scrollable-x-auto::-webkit-scrollbar {
+	width: 0.35rem; /* Custom width for scrollbars */
+	height: 0.35rem;
+}
+
+.scrollable::-webkit-scrollbar-track,
+.scrollable-y::-webkit-scrollbar-track,
+.scrollable-x::-webkit-scrollbar-track,
+.scrollable-hover::-webkit-scrollbar-track,
+.scrollable-y-hover::-webkit-scrollbar-track,
+.scrollable-x-hover::-webkit-scrollbar-track,
+.scrollable-auto::-webkit-scrollbar-track,
+.scrollable-y-auto::-webkit-scrollbar-track,
+.scrollable-x-auto::-webkit-scrollbar-track {
+	background-color: transparent; /* Transparent track */
+}
+
+.scrollable::-webkit-scrollbar-thumb,
+.scrollable-y::-webkit-scrollbar-thumb,
+.scrollable-x::-webkit-scrollbar-thumb,
+.scrollable-hover::-webkit-scrollbar-thumb,
+.scrollable-y-hover::-webkit-scrollbar-thumb,
+.scrollable-x-hover::-webkit-scrollbar-thumb,
+.scrollable-auto::-webkit-scrollbar-thumb,
+.scrollable-y-auto::-webkit-scrollbar-thumb,
+.scrollable-x-auto::-webkit-scrollbar-thumb {
+	border-radius: 1.25rem; /* Rounded scrollbar thumb */
+	background-color: transparent; /* Hidden scrollbar by default */
+}
+
+/* Show scrollbars on hover */
+.scrollable-hover:hover::-webkit-scrollbar-thumb,
+.scrollable-y-hover:hover::-webkit-scrollbar-thumb,
+.scrollable-x-hover:hover::-webkit-scrollbar-thumb {
+	background-color: #d1d5db; /* Visible scrollbar on hover (light gray) */
+}
+
+.scrollable::-webkit-scrollbar-corner,
+.scrollable-y::-webkit-scrollbar-corner,
+.scrollable-x::-webkit-scrollbar-corner,
+.scrollable-hover::-webkit-scrollbar-corner,
+.scrollable-y-hover::-webkit-scrollbar-corner,
+.scrollable-x-hover::-webkit-scrollbar-corner,
+.scrollable-auto::-webkit-scrollbar-corner,
+.scrollable-y-auto::-webkit-scrollbar-corner,
+.scrollable-x-auto::-webkit-scrollbar-corner {
+	background-color: transparent; /* Remove scrollbar corner color */
+}
+
+/* Scrollable container behaviors */
+.scrollable,
+.scrollable-hover {
+	overflow: auto; /* Allow scroll only when necessary */
+}
+
+.scrollable-y,
+.scrollable-y-hover {
+	overflow-y: auto;
+}
+
+.scrollable-x,
+.scrollable-x-hover {
+	overflow-x: auto;
+}
+
+/* Ensure scrollbar is styled consistently */
+.scrollable,
+.scrollable-y,
+.scrollable-x,
+.scrollable-auto,
+.scrollable-y-auto,
+.scrollable-x-auto,
+.scrollable-hover:hover,
+.scrollable-y-hover:hover,
+.scrollable-x-hover:hover {
+	scrollbar-color: #d1d5db transparent; /* Light gray scrollbar when visible */
+}
+
+.scrollable::-webkit-scrollbar-thumb,
+.scrollable-y::-webkit-scrollbar-thumb,
+.scrollable-x::-webkit-scrollbar-thumb,
+.scrollable-auto::-webkit-scrollbar-thumb,
+.scrollable-y-auto::-webkit-scrollbar-thumb,
+.scrollable-x-auto::-webkit-scrollbar-thumb,
+.scrollable-hover:hover::-webkit-scrollbar-thumb,
+.scrollable-y-hover:hover::-webkit-scrollbar-thumb,
+.scrollable-x-hover:hover::-webkit-scrollbar-thumb {
+	background-color: #d1d5db; /* Light gray thumb */
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+	.scrollable,
+	.scrollable-hover {
+		overflow: auto; /* Make scrollbars visible for smaller screens */
+	}
+
+	.scrollable-y,
+	.scrollable-y-hover {
+		overflow-y: auto;
+	}
+
+	.scrollable-x,
+	.scrollable-x-hover {
+		overflow-x: auto;
+	}
+}
