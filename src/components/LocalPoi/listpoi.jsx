@@ -6,28 +6,33 @@ import { DataGrid } from '@mui/x-data-grid';
 import { Button, IconButton } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
+import AddIcon from '@mui/icons-material/Add';
 
 // Table Columns
 const columns = [
-	{ field: 'name', headerName: 'Name', width: 250 },
-	{ field: 'postcode', headerName: 'Postcode', width: 150 },
-	{ field: 'address', headerName: 'Address', width: 300 },
-	{ field: 'type', headerName: 'Type', width: 150 },
+	{ field: 'name', headerName: 'Name', flex: 1 },
+	{ field: 'postcode', headerName: 'Postcode', flex: 1 },
+	{ field: 'address', headerName: 'Address', flex: 2 },
+	{ field: 'type', headerName: 'Type', flex: 1 },
 	{
 		field: 'actions',
-		headerName: '',
-		width: 100,
+		headerName: 'Actions',
+		flex: 1,
 		renderCell: () => (
 			<div className='flex space-x-2'>
 				<IconButton
 					size='small'
 					color='primary'
+					aria-label='Edit'
+					title='Edit'
 				>
 					<EditIcon />
 				</IconButton>
 				<IconButton
 					size='small'
-					color='primary'
+					color='secondary'
+					aria-label='Delete'
+					title='Delete'
 				>
 					<DeleteIcon />
 				</IconButton>
@@ -80,42 +85,62 @@ const rows = [
 		address: 'Gathering Barn',
 		type: 'Wedding_Venue',
 	},
-	// Add more rows as needed
 ];
 
 function ListPoi() {
 	return (
-		<div className='flex h-screen'>
+		<div className='flex h-screen bg-white'>
 			{/* Sidebar */}
-			<div className='w-80 bg-white border-r'>
+			<div className='w-80 bg-white'>
 				<Sidebar />
 			</div>
 
 			{/* Main Content */}
-			<div className='flex-1 p-6 bg-gray-100'>
+			<div className='flex-1 p-6 space-y-6'>
 				{/* Header */}
-				<div className='flex justify-between items-center mb-6'>
-					<h1 className='text-2xl font-semibold'>POI List</h1>
+				<div className='flex justify-between items-center bg-white shadow-lg rounded-lg p-4'>
+					<h1 className='text-3xl font-bold text-gray-700'>POI List</h1>
 					<Button
 						variant='contained'
 						color='primary'
-						startIcon={<span className='material-icons'>add</span>}
-						className='capitalize'
+						startIcon={<AddIcon />}
+						style={{
+							backgroundColor: '#4CAF50',
+							fontWeight: 'bold',
+							textTransform: 'capitalize',
+						}}
 					>
 						Create
 					</Button>
 				</div>
 
-				{/* Table */}
-				<Paper sx={{ height: 500, width: '100%' }}>
+				{/* DataGrid */}
+				<Paper
+					sx={{
+						height: 500,
+						width: '100%',
+						backgroundColor: 'white',
+						boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+					}}
+				>
 					<DataGrid
 						rows={rows}
 						columns={columns}
 						pageSizeOptions={[5, 10, 20]}
-						checkboxSelection
 						disableSelectionOnClick
 						sx={{
-							border: 0,
+							fontSize: '1rem',
+							'& .MuiDataGrid-columnHeaders': {
+								backgroundColor: '#f4f4f4',
+								fontWeight: 'bold',
+								color: '#333',
+							},
+							'& .MuiDataGrid-row:hover': {
+								backgroundColor: '#f9f9f9',
+							},
+							'& .MuiDataGrid-cell': {
+								color: '#555',
+							},
 						}}
 					/>
 				</Paper>
