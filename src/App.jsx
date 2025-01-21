@@ -22,6 +22,11 @@ import AvailabilityReport from './components/AvailabilityReport/AvailabilityRepo
 import AddLocalPoi from './components/LocalPoi/addpoi';
 import ListPoi from './components/LocalPoi/listpoi';
 
+import BookingSearch from './components/Bookings/BookingsSearch';
+import AuditView from './components/Bookings/AuditView';
+import AirportRuns from './components/Bookings/AirportRuns';
+import CardBooking from './components/Bookings/CardBookings';
+
 import AddAccount from './components/Accounts/Addaccounts';
 import ListAccount from './components/Accounts/Listaccounts';
 
@@ -30,7 +35,17 @@ import RegisterDriver from './components/Drivers/RegisterDriver';
 
 import Tariff from './components/Tariff/Tariff';
 
+import InvoiceDelete from './components/Billing&Payments/Account/InvoiceDelete';
+import InvoiceHistory from './components/Billing&Payments/Account/InvoiceHistory';
+import InvoiceProcessor from './components/Billing&Payments/Account/InvoiceProcessor';
+import StatementHistory from './components/Billing&Payments/Driver/StatementHistory';
+import StatementProcessing from './components/Billing&Payments/Driver/StatementProcessing';
+
+import DriverEarningsReport from './components/DriverEarningReport/DriverEarningsReport';
+
 import CompanyConfig from './components/CompanyConfig/CompanyConfig';
+
+import MessageConfig from './components/MessageConfig/MessageConfig';
 
 /** @format */
 
@@ -100,6 +115,23 @@ function App() {
 				/>
 
 				<Route
+					path='bookingsearch'
+					element={<ProtectedRoute element={<BookingSearch />} />}
+				/>
+				<Route
+					path='auditview'
+					element={<ProtectedRoute element={<AuditView />} />}
+				/>
+				<Route
+					path='airportruns'
+					element={<ProtectedRoute element={<AirportRuns />} />}
+				/>
+				<Route
+					path='cardbooking'
+					element={<ProtectedRoute element={<CardBooking />} />}
+				/>
+
+				<Route
 					path='/addaccounts'
 					element={<ProtectedRoute element={<AddAccount />} />}
 				/>
@@ -123,8 +155,39 @@ function App() {
 				/>
 
 				<Route
+					path='/invoicedelete'
+					element={<ProtectedRoute element={<InvoiceDelete />} />}
+				/>
+				<Route
+					path='/invoicehistory'
+					element={<ProtectedRoute element={<InvoiceHistory />} />}
+				/>
+				<Route
+					path='/invoiceprocessor'
+					element={<ProtectedRoute element={<InvoiceProcessor />} />}
+				/>
+				<Route
+					path='/statementhistory'
+					element={<ProtectedRoute element={<StatementHistory />} />}
+				/>
+				<Route
+					path='/statementprocessing'
+					element={<ProtectedRoute element={<StatementProcessing />} />}
+				/>
+
+				<Route
+					path='/driverearningsreport'
+					element={<ProtectedRoute element={<DriverEarningsReport />} />}
+				/>
+
+				<Route
 					path='/companyconfig'
 					element={<ProtectedRoute element={<CompanyConfig />} />}
+				/>
+
+				<Route
+					path='/messageconfig'
+					element={<ProtectedRoute element={<MessageConfig />} />}
 				/>
 			</Routes>
 		</div>
