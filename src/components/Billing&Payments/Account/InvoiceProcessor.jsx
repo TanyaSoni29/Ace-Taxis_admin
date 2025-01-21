@@ -1,14 +1,11 @@
-import Sidebar from "../../Sidebar/Sidebar";
+/** @format */
 
 const InvoiceProcessor = () => {
-    return (
-        <div>
-            <Sidebar />
-            <div>
-                Invoice Processor
-            </div>
-        </div>
-    )
-}
+	return (
+		<div>
+			<div>Invoice Processor</div>
+		</div>
+	);
+};
 
 export default InvoiceProcessor;

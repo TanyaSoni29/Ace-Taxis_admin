@@ -2,7 +2,6 @@
 
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
-import Sidebar from "../Sidebar/Sidebar";
 
 const AddAccounts = () => {
   const {
@@ -37,7 +36,6 @@ const AddAccounts = () => {
 
   return (
     <>
-    <Sidebar />
     <div className="flex flex-col items-center min-h-screen bg-gray-100">
       <div className="w-full max-w-5xl bg-white shadow-md rounded-lg p-10">
         <h2 className="text-2xl font-bold text-gray-700 mb-6">Accounts</h2>
