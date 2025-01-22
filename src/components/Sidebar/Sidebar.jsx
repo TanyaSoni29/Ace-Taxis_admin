@@ -95,25 +95,29 @@ function Sidebar() {
 										fontSize='1.125rem'
 									/>
 								</span>
-								<span
-									className={`flex items-center leading-none flex-grow text-sm font-medium hover:text-[#1b84ff] text-[#252F4A]
+								{!isCollapsed && (
+									<span
+										className={`flex items-center leading-none flex-grow text-sm font-medium hover:text-[#1b84ff] text-[#252F4A]
 									`}
-								>
-									Dashboards
-								</span>
-								<span className='flex items-center text-[#C4CADA] w-[20px] shrink-0 justify-end ms-1 me-[-10px] text-center'>
-									{activeDropdown?.level1 === 'dashboard' ? (
-										<RemoveOutlinedIcon
-											className='leading-[0.75rem] text-center'
-											fontSize='0.6875rem'
-										/>
-									) : (
-										<AddOutlinedIcon
-											className='leading-[0.75rem]'
-											fontSize='0.6875rem'
-										/>
-									)}
-								</span>
+									>
+										Dashboards
+									</span>
+								)}
+								{!isCollapsed && (
+									<span className='flex items-center text-[#C4CADA] w-[20px] shrink-0 justify-end ms-1 me-[-10px] text-center'>
+										{activeDropdown?.level1 === 'dashboard' ? (
+											<RemoveOutlinedIcon
+												className='leading-[0.75rem] text-center'
+												fontSize='0.6875rem'
+											/>
+										) : (
+											<AddOutlinedIcon
+												className='leading-[0.75rem]'
+												fontSize='0.6875rem'
+											/>
+										)}
+									</span>
+								)}
 							</div>
 							{activeDropdown?.level1 === 'dashboard' && (
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
@@ -184,25 +188,29 @@ function Sidebar() {
 										fontSize='1.125rem'
 									/>
 								</span>
-								<span
-									className={`flex items-center leading-none flex-grow text-sm font-medium hover:text-[#1b84ff] text-[#252F4A]
+								{!isCollapsed && (
+									<span
+										className={`flex items-center leading-none flex-grow text-sm font-medium hover:text-[#1b84ff] text-[#252F4A]
 									`}
-								>
-									Bookings
-								</span>
-								<span className='flex items-center text-[#C4CADA] w-[20px] shrink-0 justify-end ms-1 me-[-10px] text-center'>
-									{activeDropdown?.level1 === 'bookings' ? (
-										<RemoveOutlinedIcon
-											className='leading-[0.75rem] text-center'
-											fontSize='0.6875rem'
-										/>
-									) : (
-										<AddOutlinedIcon
-											className='leading-[0.75rem]'
-											fontSize='0.6875rem'
-										/>
-									)}
-								</span>
+									>
+										Bookings
+									</span>
+								)}
+								{!isCollapsed && (
+									<span className='flex items-center text-[#C4CADA] w-[20px] shrink-0 justify-end ms-1 me-[-10px] text-center'>
+										{activeDropdown?.level1 === 'bookings' ? (
+											<RemoveOutlinedIcon
+												className='leading-[0.75rem] text-center'
+												fontSize='0.6875rem'
+											/>
+										) : (
+											<AddOutlinedIcon
+												className='leading-[0.75rem]'
+												fontSize='0.6875rem'
+											/>
+										)}
+									</span>
+								)}
 							</div>
 							{activeDropdown?.level1 === 'bookings' && (
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
@@ -355,25 +363,29 @@ function Sidebar() {
 										fontSize='1.125rem'
 									/>
 								</span>
-								<span
-									className={`flex items-center leading-none flex-grow text-sm font-medium hover:text-[#1b84ff] text-[#252F4A]
+								{!isCollapsed && (
+									<span
+										className={`flex items-center leading-none flex-grow text-sm font-medium hover:text-[#1b84ff] text-[#252F4A]
 									`}
-								>
-									Dispatch
-								</span>
-								<span className='flex items-center text-[#C4CADA] w-[20px] shrink-0 justify-end ms-1 me-[-10px] text-center'>
-									{activeDropdown?.level1 === 'dispatch' ? (
-										<RemoveOutlinedIcon
-											className='leading-[0.75rem] text-center'
-											fontSize='0.6875rem'
-										/>
-									) : (
-										<AddOutlinedIcon
-											className='leading-[0.75rem]'
-											fontSize='0.6875rem'
-										/>
-									)}
-								</span>
+									>
+										Dispatch
+									</span>
+								)}
+								{!isCollapsed && (
+									<span className='flex items-center text-[#C4CADA] w-[20px] shrink-0 justify-end ms-1 me-[-10px] text-center'>
+										{activeDropdown?.level1 === 'dispatch' ? (
+											<RemoveOutlinedIcon
+												className='leading-[0.75rem] text-center'
+												fontSize='0.6875rem'
+											/>
+										) : (
+											<AddOutlinedIcon
+												className='leading-[0.75rem]'
+												fontSize='0.6875rem'
+											/>
+										)}
+									</span>
+								)}
 							</div>
 							{activeDropdown?.level1 === 'dispatch' && (
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
@@ -499,25 +511,29 @@ function Sidebar() {
 										fontSize='1.125rem'
 									/>
 								</span>
-								<span
-									className={`flex items-center leading-none flex-grow text-sm font-medium hover:text-[#1b84ff] text-[#252F4A]
+								{!isCollapsed && (
+									<span
+										className={`flex items-center leading-none flex-grow text-sm font-medium hover:text-[#1b84ff] text-[#252F4A]
 									`}
-								>
-									Local POIs
-								</span>
-								<span className='flex items-center text-[#C4CADA] w-[20px] shrink-0 justify-end ms-1 me-[-10px] text-center'>
-									{activeDropdown?.level1 === 'localPoi' ? (
-										<RemoveOutlinedIcon
-											className='leading-[0.75rem] text-center'
-											fontSize='0.6875rem'
-										/>
-									) : (
-										<AddOutlinedIcon
-											className='leading-[0.75rem]'
-											fontSize='0.6875rem'
-										/>
-									)}
-								</span>
+									>
+										Local POIs
+									</span>
+								)}
+								{!isCollapsed && (
+									<span className='flex items-center text-[#C4CADA] w-[20px] shrink-0 justify-end ms-1 me-[-10px] text-center'>
+										{activeDropdown?.level1 === 'localPoi' ? (
+											<RemoveOutlinedIcon
+												className='leading-[0.75rem] text-center'
+												fontSize='0.6875rem'
+											/>
+										) : (
+											<AddOutlinedIcon
+												className='leading-[0.75rem]'
+												fontSize='0.6875rem'
+											/>
+										)}
+									</span>
+								)}
 							</div>
 							{activeDropdown?.level1 === 'localPoi' && (
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
@@ -589,25 +605,29 @@ function Sidebar() {
 										fontSize='1.125rem'
 									/>
 								</span>
-								<span
-									className={`flex items-center leading-none flex-grow text-sm font-medium hover:text-[#1b84ff] text-[#252F4A]
+								{!isCollapsed && (
+									<span
+										className={`flex items-center leading-none flex-grow text-sm font-medium hover:text-[#1b84ff] text-[#252F4A]
 									`}
-								>
-									Accounts
-								</span>
-								<span className='flex items-center text-[#C4CADA] w-[20px] shrink-0 justify-end ms-1 me-[-10px] text-center'>
-									{activeDropdown?.level1 === 'accounts' ? (
-										<RemoveOutlinedIcon
-											className='leading-[0.75rem] text-center'
-											fontSize='0.6875rem'
-										/>
-									) : (
-										<AddOutlinedIcon
-											className='leading-[0.75rem]'
-											fontSize='0.6875rem'
-										/>
-									)}
-								</span>
+									>
+										Accounts
+									</span>
+								)}
+								{!isCollapsed && (
+									<span className='flex items-center text-[#C4CADA] w-[20px] shrink-0 justify-end ms-1 me-[-10px] text-center'>
+										{activeDropdown?.level1 === 'accounts' ? (
+											<RemoveOutlinedIcon
+												className='leading-[0.75rem] text-center'
+												fontSize='0.6875rem'
+											/>
+										) : (
+											<AddOutlinedIcon
+												className='leading-[0.75rem]'
+												fontSize='0.6875rem'
+											/>
+										)}
+									</span>
+								)}
 							</div>
 							{activeDropdown?.level1 === 'accounts' && (
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
@@ -679,25 +699,29 @@ function Sidebar() {
 										fontSize='1.125rem'
 									/>
 								</span>
-								<span
-									className={`flex items-center leading-none flex-grow text-sm font-medium hover:text-[#1b84ff] text-[#252F4A]
+								{!isCollapsed && (
+									<span
+										className={`flex items-center leading-none flex-grow text-sm font-medium hover:text-[#1b84ff] text-[#252F4A]
 									`}
-								>
-									Drivers
-								</span>
-								<span className='flex items-center text-[#C4CADA] w-[20px] shrink-0 justify-end ms-1 me-[-10px] text-center'>
-									{activeDropdown?.level1 === 'drivers' ? (
-										<RemoveOutlinedIcon
-											className='leading-[0.75rem] text-center'
-											fontSize='0.6875rem'
-										/>
-									) : (
-										<AddOutlinedIcon
-											className='leading-[0.75rem]'
-											fontSize='0.6875rem'
-										/>
-									)}
-								</span>
+									>
+										Drivers
+									</span>
+								)}
+								{!isCollapsed && (
+									<span className='flex items-center text-[#C4CADA] w-[20px] shrink-0 justify-end ms-1 me-[-10px] text-center'>
+										{activeDropdown?.level1 === 'drivers' ? (
+											<RemoveOutlinedIcon
+												className='leading-[0.75rem] text-center'
+												fontSize='0.6875rem'
+											/>
+										) : (
+											<AddOutlinedIcon
+												className='leading-[0.75rem]'
+												fontSize='0.6875rem'
+											/>
+										)}
+									</span>
+								)}
 							</div>
 							{activeDropdown?.level1 === 'drivers' && (
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
@@ -774,16 +798,18 @@ function Sidebar() {
 											fontSize='1.125rem'
 										/>
 									</span>
-									<span
-										className={`flex items-center leading-none flex-grow text-sm font-medium ${
-											location.pathname === '/tracking'
-												? 'text-[#1b84ff] font-semibold'
-												: 'hover:!text-[#1b84ff] text-[#252F4A]'
-										}
+									{!isCollapsed && (
+										<span
+											className={`flex items-center leading-none flex-grow text-sm font-medium ${
+												location.pathname === '/tracking'
+													? 'text-[#1b84ff] font-semibold'
+													: 'hover:!text-[#1b84ff] text-[#252F4A]'
+											}
 											`}
-									>
-										Tracking Driver
-									</span>
+										>
+											Tracking Driver
+										</span>
+									)}
 								</Link>
 							</div>
 
@@ -802,16 +828,18 @@ function Sidebar() {
 											fontSize='1.125rem'
 										/>
 									</span>
-									<span
-										className={`flex items-center leading-none flex-grow text-sm font-medium ${
-											location.pathname === '/availability'
-												? 'text-[#1b84ff] font-semibold'
-												: 'hover:!text-[#1b84ff] text-[#252F4A]'
-										}
+									{!isCollapsed && (
+										<span
+											className={`flex items-center leading-none flex-grow text-sm font-medium ${
+												location.pathname === '/availability'
+													? 'text-[#1b84ff] font-semibold'
+													: 'hover:!text-[#1b84ff] text-[#252F4A]'
+											}
 											`}
-									>
-										Availability
-									</span>
+										>
+											Availability
+										</span>
+									)}
 								</Link>
 							</div>
 
@@ -830,24 +858,28 @@ function Sidebar() {
 											fontSize='1.125rem'
 										/>
 									</span>
-									<span
-										className={`flex items-center leading-none flex-grow text-sm font-medium ${
-											location.pathname === '/availability-logs'
-												? 'text-[#1b84ff] font-semibold'
-												: 'hover:!text-[#1b84ff] text-[#252F4A]'
-										}
+									{!isCollapsed && (
+										<span
+											className={`flex items-center leading-none flex-grow text-sm font-medium ${
+												location.pathname === '/availability-logs'
+													? 'text-[#1b84ff] font-semibold'
+													: 'hover:!text-[#1b84ff] text-[#252F4A]'
+											}
 											`}
-									>
-										Availability Logs
-									</span>
+										>
+											Availability Logs
+										</span>
+									)}
 								</Link>
 							</div>
 						</div>
 
 						<div className='p-0 m-0 flex flex-col pt-2.25 pb-px'>
-							<span className='uppercase text-[0.8125rem] leading-[1.125rem] font-medium text-[#99a1b7] ps-[10px] pe-[10px]'>
-								Billings
-							</span>
+							{!isCollapsed && (
+								<span className='uppercase text-[0.8125rem] leading-[1.125rem] font-medium text-[#99a1b7] ps-[10px] pe-[10px]'>
+									Billings
+								</span>
+							)}
 						</div>
 						<div className='p-0 m-0 flex flex-col'>
 							<div
@@ -860,22 +892,26 @@ function Sidebar() {
 										fontSize='1.125rem'
 									/>
 								</span>
-								<span className='flex items-center leading-none flex-grow text-sm font-medium text-[#252F4A] hover:text-[#1b84ff]'>
-									Billing & Payments
-								</span>
-								<span className='flex items-center text-[#C4CADA] w-[20px] shrink-0 justify-end ms-1 me-[-10px]'>
-									{activeDropdown?.level1 === 'billings' ? (
-										<RemoveOutlinedIcon
-											className='leading-[0.75rem] text-center'
-											fontSize='0.6875rem'
-										/>
-									) : (
-										<AddOutlinedIcon
-											className='leading-[0.75rem] text-center'
-											fontSize='0.6875rem'
-										/>
-									)}
-								</span>
+								{!isCollapsed && (
+									<span className='flex items-center leading-none flex-grow text-sm font-medium text-[#252F4A] hover:text-[#1b84ff]'>
+										Billing & Payments
+									</span>
+								)}
+								{!isCollapsed && (
+									<span className='flex items-center text-[#C4CADA] w-[20px] shrink-0 justify-end ms-1 me-[-10px]'>
+										{activeDropdown?.level1 === 'billings' ? (
+											<RemoveOutlinedIcon
+												className='leading-[0.75rem] text-center'
+												fontSize='0.6875rem'
+											/>
+										) : (
+											<AddOutlinedIcon
+												className='leading-[0.75rem] text-center'
+												fontSize='0.6875rem'
+											/>
+										)}
+									</span>
+								)}
 							</div>
 							{activeDropdown?.level1 === 'billings' && (
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
@@ -1438,23 +1474,27 @@ function Sidebar() {
 										fontSize='1.125rem'
 									/>
 								</span>
-								<span
-									className={`flex items-center leading-none flex-grow text-sm font-medium ${
-										location.pathname === '/tariffs'
-											? 'text-[#1b84ff] font-semibold'
-											: 'hover:!text-[#1b84ff] text-[#252F4A]'
-									}
+								{!isCollapsed && (
+									<span
+										className={`flex items-center leading-none flex-grow text-sm font-medium ${
+											location.pathname === '/tariffs'
+												? 'text-[#1b84ff] font-semibold'
+												: 'hover:!text-[#1b84ff] text-[#252F4A]'
+										}
 											`}
-								>
-									Tariffs
-								</span>
+									>
+										Tariffs
+									</span>
+								)}
 							</Link>
 						</div>
 
 						<div className='p-0 m-0 flex flex-col pt-2.25 pb-px'>
-							<span className='uppercase text-[0.8125rem] leading-[1.125rem] font-medium text-[#99a1b7] ps-[10px] pe-[10px]'>
-								Reports
-							</span>
+							{!isCollapsed && (
+								<span className='uppercase text-[0.8125rem] leading-[1.125rem] font-medium text-[#99a1b7] ps-[10px] pe-[10px]'>
+									Reports
+								</span>
+							)}
 						</div>
 						<div className='p-0 m-0'>
 							<div
@@ -1467,25 +1507,29 @@ function Sidebar() {
 										fontSize='1.125rem'
 									/>
 								</span>
-								<span
-									className={`flex items-center leading-none flex-grow text-sm font-medium hover:text-[#1b84ff] text-[#252F4A]
+								{!isCollapsed && (
+									<span
+										className={`flex items-center leading-none flex-grow text-sm font-medium hover:text-[#1b84ff] text-[#252F4A]
 									`}
-								>
-									Reports
-								</span>
-								<span className='flex items-center text-[#C4CADA] w-[20px] shrink-0 justify-end ms-1 me-[-10px] text-center'>
-									{activeDropdown?.level1 === 'reports' ? (
-										<RemoveOutlinedIcon
-											className='leading-[0.75rem] text-center'
-											fontSize='0.6875rem'
-										/>
-									) : (
-										<AddOutlinedIcon
-											className='leading-[0.75rem]'
-											fontSize='0.6875rem'
-										/>
-									)}
-								</span>
+									>
+										Reports
+									</span>
+								)}
+								{!isCollapsed && (
+									<span className='flex items-center text-[#C4CADA] w-[20px] shrink-0 justify-end ms-1 me-[-10px] text-center'>
+										{activeDropdown?.level1 === 'reports' ? (
+											<RemoveOutlinedIcon
+												className='leading-[0.75rem] text-center'
+												fontSize='0.6875rem'
+											/>
+										) : (
+											<AddOutlinedIcon
+												className='leading-[0.75rem]'
+												fontSize='0.6875rem'
+											/>
+										)}
+									</span>
+								)}
 							</div>
 							{activeDropdown?.level1 === 'reports' && (
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
@@ -1548,9 +1592,11 @@ function Sidebar() {
 						</div>
 
 						<div className='p-0 m-0 flex flex-col pt-2.25 pb-px'>
-							<span className='uppercase text-[0.8125rem] leading-[1.125rem] font-medium text-[#99a1b7] ps-[10px] pe-[10px]'>
-								Settings
-							</span>
+							{!isCollapsed && (
+								<span className='uppercase text-[0.8125rem] leading-[1.125rem] font-medium text-[#99a1b7] ps-[10px] pe-[10px]'>
+									Settings
+								</span>
+							)}
 						</div>
 
 						<div className='p-0 m-0'>
@@ -1564,25 +1610,29 @@ function Sidebar() {
 										fontSize='1.125rem'
 									/>
 								</span>
-								<span
-									className={`flex items-center leading-none flex-grow text-sm font-medium hover:text-[#1b84ff] text-[#252F4A]
+								{!isCollapsed && (
+									<span
+										className={`flex items-center leading-none flex-grow text-sm font-medium hover:text-[#1b84ff] text-[#252F4A]
 									`}
-								>
-									Settings
-								</span>
-								<span className='flex items-center text-[#C4CADA] w-[20px] shrink-0 justify-end ms-1 me-[-10px] text-center'>
-									{activeDropdown?.level1 === 'settings' ? (
-										<RemoveOutlinedIcon
-											className='leading-[0.75rem] text-center'
-											fontSize='0.6875rem'
-										/>
-									) : (
-										<AddOutlinedIcon
-											className='leading-[0.75rem]'
-											fontSize='0.6875rem'
-										/>
-									)}
-								</span>
+									>
+										Settings
+									</span>
+								)}
+								{!isCollapsed && (
+									<span className='flex items-center text-[#C4CADA] w-[20px] shrink-0 justify-end ms-1 me-[-10px] text-center'>
+										{activeDropdown?.level1 === 'settings' ? (
+											<RemoveOutlinedIcon
+												className='leading-[0.75rem] text-center'
+												fontSize='0.6875rem'
+											/>
+										) : (
+											<AddOutlinedIcon
+												className='leading-[0.75rem]'
+												fontSize='0.6875rem'
+											/>
+										)}
+									</span>
+								)}
 							</div>
 							{activeDropdown?.level1 === 'settings' && (
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
