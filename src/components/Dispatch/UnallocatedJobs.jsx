@@ -45,75 +45,84 @@ const rows = [
 
 const UnallocatedJobs = () => {
   return (
-    <div className="flex h-screen bg-white">
-
+    <div className="flex h-screen bg-gray-50">
       {/* Main Content */}
-      <div className="flex-1 p-6 space-y-6">
+      <div className="flex-1 px-10 py-8 space-y-6 ml-4"> {/* Added `ml-4` */}
         {/* Header */}
-        <h1 className="text-2xl font-semibold">Unallocated Jobs</h1>
-
-        {/* Filters */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div>
-            <label className="block text-gray-700 font-medium mb-2">
-              Search by date
-            </label>
-            <TextField
-              type="date"
-              defaultValue="2025-01-21"
-              variant="outlined"
-              size="small"
-              style={{ width: "100%" }}
-            />
-          </div>
-          <div>
-            <label className="block text-gray-700 font-medium mb-2">
-              View by Scope
-            </label>
-            <TextField
-              select
-              defaultValue="All"
-              variant="outlined"
-              size="small"
-              style={{ width: "100%" }}
-            >
-              <MenuItem value="All">All</MenuItem>
-              <MenuItem value="Local">Local</MenuItem>
-              <MenuItem value="Regional">Regional</MenuItem>
-            </TextField>
-          </div>
+        <div className="bg-white shadow rounded-lg p-6">
+          <h1 className="text-2xl font-semibold text-gray-800">Unallocated Jobs</h1>
         </div>
 
-        <div>
-          <Button
-            variant="contained"
-            color="error"
-            style={{ width: "150px", height: "40px" }}
-          >
-            SEARCH
-          </Button>
+        {/* Filters Section */}
+        <div className="bg-white shadow rounded-lg p-6">
+          <h2 className="text-lg font-medium text-gray-700 mb-4">Filters</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label className="block text-gray-700 font-medium mb-2">
+                Search by Date
+              </label>
+              <TextField
+                type="date"
+                defaultValue="2025-01-21"
+                variant="outlined"
+                size="small"
+                style={{ width: "100%" }}
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700 font-medium mb-2">
+                View by Scope
+              </label>
+              <TextField
+                select
+                defaultValue="All"
+                variant="outlined"
+                size="small"
+                style={{ width: "100%" }}
+              >
+                <MenuItem value="All">All</MenuItem>
+                <MenuItem value="Local">Local</MenuItem>
+                <MenuItem value="Regional">Regional</MenuItem>
+              </TextField>
+            </div>
+          </div>
+          <div className="mt-4">
+            <Button
+              variant="contained"
+              color="primary"
+              style={{ width: "150px", height: "40px" }}
+            >
+              Search
+            </Button>
+          </div>
         </div>
 
         {/* Jobs DataGrid */}
-        <Paper sx={{ height: 500, width: "100%" }} elevation={3}>
-          <DataGrid
-            rows={rows}
-            columns={columns}
-            pageSizeOptions={[5, 10, 20]}
-            checkboxSelection
-            disableSelectionOnClick
-            sx={{
-              border: 0,
-              "& .MuiDataGrid-columnHeaders": {
-                backgroundColor: "#f5f5f5",
-                fontWeight: "bold",
-              },
-              "& .MuiDataGrid-footerContainer": {
-                backgroundColor: "#f5f5f5",
-              },
-            }}
-          />
-        </Paper>
+        <div className="bg-white shadow rounded-lg p-6">
+          <h2 className="text-lg font-medium text-gray-700 mb-4">Jobs</h2>
+          <Paper sx={{ height: 500, width: "100%" }} elevation={3}>
+            <DataGrid
+              rows={rows}
+              columns={columns}
+              pageSizeOptions={[5, 10, 20]}
+              checkboxSelection
+              disableSelectionOnClick
+              sx={{
+                border: 0,
+                "& .MuiDataGrid-columnHeaders": {
+                  backgroundColor: "#f3f4f6",
+                  fontWeight: "bold",
+                },
+                "& .MuiDataGrid-footerContainer": {
+                  backgroundColor: "#f3f4f6",
+                },
+                "& .MuiDataGrid-row:hover": {
+                  backgroundColor: "#f9fafb",
+                },
+              }}
+            />
+          </Paper>
+        </div>
       </div>
     </div>
   );
