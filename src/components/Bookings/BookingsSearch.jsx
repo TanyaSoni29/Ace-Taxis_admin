@@ -100,7 +100,7 @@ const rows = [
 
 const BookingSearch = () => {
 	return (
-		<div className='flex h-screen bg-gray-50'>
+		<div className='flex h-screen bg-white'>
 			<div className='flex-1 px-10 py-8 space-y-6 ml-4'>
 				{/* Header */}
 				<div className='flex justify-between items-center mb-6'>
@@ -108,7 +108,7 @@ const BookingSearch = () => {
 					<Button
 						variant='contained'
 						color='success'
-						startIcon={<span className='material-icons'>add</span>}
+						startIcon={<span className='material-icons'>+</span>}
 						className='capitalize'
 					>
 						Create New
