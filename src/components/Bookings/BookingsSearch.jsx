@@ -9,14 +9,14 @@ import MapIcon from '@mui/icons-material/Map';
 
 // Table Columns
 const columns = [
-	{ field: 'id', headerName: '#', width: 70 },
-	{ field: 'date', headerName: 'Date', width: 150 },
-	{ field: 'pickup', headerName: 'Pickup', width: 250 },
-	{ field: 'destination', headerName: 'Destination', width: 250 },
+	{ field: 'id', headerName: '#', width: 50 },
+	{ field: 'date', headerName: 'Date', width: 80 },
+	{ field: 'pickup', headerName: 'Pickup', width: 220 },
+	{ field: 'destination', headerName: 'Destination', width: 220 },
 	{
 		field: 'notes',
 		headerName: '*',
-		width: 120,
+		width: 100,
 		renderCell: (params) =>
 			params.value ? (
 				<span className='text-red-500 font-bold'>*HAS NOTES*</span>
@@ -24,13 +24,13 @@ const columns = [
 				''
 			),
 	},
-	{ field: 'passenger', headerName: 'Passenger', width: 150 },
-	{ field: 'pax', headerName: 'Pax', width: 80 },
-	{ field: 'phone', headerName: 'Phone', width: 150 },
-	{ field: 'driver', headerName: 'Driver #', width: 120 },
-	{ field: 'driverFee', headerName: 'Driver £', width: 100 },
-	{ field: 'accFee', headerName: 'Acc £', width: 100 },
-	{ field: 'mFee', headerName: 'M £', width: 100 },
+	{ field: 'passenger', headerName: 'Passenger', width: 80 },
+	{ field: 'pax', headerName: 'Pax', width: 50 },
+	{ field: 'phone', headerName: 'Phone', width: 80 },
+	{ field: 'driver', headerName: 'Driver #', width: 80 },
+	{ field: 'driverFee', headerName: 'Driver £', width: 80 },
+	{ field: 'accFee', headerName: 'Acc £', width: 80 },
+	{ field: 'mFee', headerName: 'M £', width: 80 },
 	{
 		field: 'map',
 		headerName: '',
@@ -100,8 +100,8 @@ const rows = [
 
 const BookingSearch = () => {
 	return (
-		<div className='flex-1 p-6 bg-gray-100 flex justify-center'>
-			<div className='w-full max-w-5xl'>
+		<div className='flex h-screen bg-gray-50'>
+			<div className='flex-1 px-10 py-8 space-y-6 ml-4'>
 				{/* Header */}
 				<div className='flex justify-between items-center mb-6'>
 					<h1 className='text-2xl font-semibold'>Bookings List</h1>
@@ -168,7 +168,7 @@ const BookingSearch = () => {
 				</div>
 
 				{/* Data Table */}
-				<Paper sx={{ height: 500, width: '100%', maxWidth: '1200px' }}>
+				<Paper sx={{ height: 500, width: "100%" }}>
 					<DataGrid
 						rows={rows}
 						columns={columns}
