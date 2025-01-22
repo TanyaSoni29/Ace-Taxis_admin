@@ -119,7 +119,7 @@ function Sidebar() {
 									</span>
 								)}
 							</div>
-							{activeDropdown?.level1 === 'dashboard' && (
+							{!isCollapsed && activeDropdown?.level1 === 'dashboard' && (
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
@@ -186,7 +186,7 @@ function Sidebar() {
 									</span>
 								)}
 							</div>
-							{activeDropdown?.level1 === 'bookings' && (
+							{!isCollapsed && activeDropdown?.level1 === 'bookings' && (
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
@@ -361,7 +361,7 @@ function Sidebar() {
 									</span>
 								)}
 							</div>
-							{activeDropdown?.level1 === 'dispatch' && (
+							{!isCollapsed && activeDropdown?.level1 === 'dispatch' && (
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
@@ -509,7 +509,7 @@ function Sidebar() {
 									</span>
 								)}
 							</div>
-							{activeDropdown?.level1 === 'localPoi' && (
+							{!isCollapsed && activeDropdown?.level1 === 'localPoi' && (
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
@@ -603,7 +603,7 @@ function Sidebar() {
 									</span>
 								)}
 							</div>
-							{activeDropdown?.level1 === 'accounts' && (
+							{!isCollapsed && activeDropdown?.level1 === 'accounts' && (
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
@@ -697,7 +697,7 @@ function Sidebar() {
 									</span>
 								)}
 							</div>
-							{activeDropdown?.level1 === 'drivers' && (
+							{!isCollapsed && activeDropdown?.level1 === 'drivers' && (
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
@@ -887,7 +887,7 @@ function Sidebar() {
 									</span>
 								)}
 							</div>
-							{activeDropdown?.level1 === 'billings' && (
+							{!isCollapsed && activeDropdown?.level1 === 'billings' && (
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
 									<div className='p-0 m-0 flex flex-col'>
 										<div
@@ -920,63 +920,64 @@ function Sidebar() {
 												)}
 											</span>
 										</div>
-										{activeDropdown?.level2 === 'billing-driver' && (
-											<div className='p-0 m-0 flex flex-col gap-0.5 relative before:absolute before:start-[32px] ps-[22px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
-												<div className='p-0 m-0 flex flex-col'>
-													<Link
-														className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
-															location.pathname === '/statement'
-																? 'bg-[#f9f9f9] rounded-lg'
-																: 'hover:bg-[#f9f9f9] hover:rounded-lg'
-														} gap-[14px] ps-[10px] pe-[10px] py-[8px]`}
-														to='/statement'
-													>
-														<span
-															className={`items-center flex-shrink-0 flex w-[6px] -start-[3px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-y-1/2 ${
+										{!isCollapsed &&
+											activeDropdown?.level2 === 'billing-driver' && (
+												<div className='p-0 m-0 flex flex-col gap-0.5 relative before:absolute before:start-[32px] ps-[22px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
+													<div className='p-0 m-0 flex flex-col'>
+														<Link
+															className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 																location.pathname === '/statement'
-																	? 'before:bg-[#006ae6]'
-																	: 'hover:before:bg-[#006ae6]'
-															}`}
-														></span>
-														<span
-															className={`flex items-center flex-grow text-[0.8125rem] leading-[1.125rem] font-normal ${
-																location.pathname === '/statement'
-																	? 'text-[#1b84ff] font-semibold'
-																	: 'hover:!text-[#1b84ff] text-[#252F4A]'
-															}`}
+																	? 'bg-[#f9f9f9] rounded-lg'
+																	: 'hover:bg-[#f9f9f9] hover:rounded-lg'
+															} gap-[14px] ps-[10px] pe-[10px] py-[8px]`}
+															to='/statement'
 														>
-															Statement Processing
-														</span>
-													</Link>
-												</div>
-												<div className='p-0 m-0 flex flex-col'>
-													<Link
-														className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
-															location.pathname === '/statement-history'
-																? 'bg-[#f9f9f9] rounded-lg'
-																: 'hover:bg-[#f9f9f9] hover:rounded-lg'
-														} gap-[14px] ps-[10px] pe-[10px] py-[8px]`}
-														to='/statement-history'
-													>
-														<span
-															className={`items-center flex-shrink-0 flex w-[6px] -start-[3px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-y-1/2 ${
+															<span
+																className={`items-center flex-shrink-0 flex w-[6px] -start-[3px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-y-1/2 ${
+																	location.pathname === '/statement'
+																		? 'before:bg-[#006ae6]'
+																		: 'hover:before:bg-[#006ae6]'
+																}`}
+															></span>
+															<span
+																className={`flex items-center flex-grow text-[0.8125rem] leading-[1.125rem] font-normal ${
+																	location.pathname === '/statement'
+																		? 'text-[#1b84ff] font-semibold'
+																		: 'hover:!text-[#1b84ff] text-[#252F4A]'
+																}`}
+															>
+																Statement Processing
+															</span>
+														</Link>
+													</div>
+													<div className='p-0 m-0 flex flex-col'>
+														<Link
+															className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 																location.pathname === '/statement-history'
-																	? 'before:bg-[#006ae6]'
-																	: 'hover:before:bg-[#006ae6]'
-															}`}
-														></span>
-														<span
-															className={`flex items-center flex-grow text-[0.8125rem] leading-[1.125rem] font-normal ${
-																location.pathname === '/statement-history'
-																	? 'text-[#1b84ff] font-semibold'
-																	: 'hover:!text-[#1b84ff] text-[#252F4A]'
-															}`}
+																	? 'bg-[#f9f9f9] rounded-lg'
+																	: 'hover:bg-[#f9f9f9] hover:rounded-lg'
+															} gap-[14px] ps-[10px] pe-[10px] py-[8px]`}
+															to='/statement-history'
 														>
-															Statement History
-														</span>
-													</Link>
-												</div>
-												{/* <div className='p-0 m-0 flex flex-col-reverse'>
+															<span
+																className={`items-center flex-shrink-0 flex w-[6px] -start-[3px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-y-1/2 ${
+																	location.pathname === '/statement-history'
+																		? 'before:bg-[#006ae6]'
+																		: 'hover:before:bg-[#006ae6]'
+																}`}
+															></span>
+															<span
+																className={`flex items-center flex-grow text-[0.8125rem] leading-[1.125rem] font-normal ${
+																	location.pathname === '/statement-history'
+																		? 'text-[#1b84ff] font-semibold'
+																		: 'hover:!text-[#1b84ff] text-[#252F4A]'
+																}`}
+															>
+																Statement History
+															</span>
+														</Link>
+													</div>
+													{/* <div className='p-0 m-0 flex flex-col-reverse'>
 													<div
 														className='p-0 m-0 flex items-center border border-transparent grow cursor-pointer gap-[5px] ps-[10px] pe-[10px] py-[8px]'
 														onClick={() => setIsExpanded(!isExpanded)}
@@ -1128,8 +1129,8 @@ function Sidebar() {
 														</div>
 													)}
 												</div> */}
-											</div>
-										)}
+												</div>
+											)}
 									</div>
 									<div className='p-0 m-0 flex flex-col'>
 										<div
@@ -1164,90 +1165,91 @@ function Sidebar() {
 												)}
 											</span>
 										</div>
-										{activeDropdown?.level2 === 'billing-account' && (
-											<div className='p-0 m-0 flex flex-col gap-0.5 relative before:absolute before:start-[32px] ps-[22px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
-												<div className='p-0 m-0 flex flex-col'>
-													<Link
-														className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
-															location.pathname === '/account-invoice'
-																? 'bg-[#f9f9f9] rounded-lg'
-																: 'hover:bg-[#f9f9f9] hover:rounded-lg'
-														} gap-[14px] ps-[10px] pe-[10px] py-[8px]`}
-														to='/account-invoice'
-													>
-														<span
-															className={`items-center flex-shrink-0 flex w-[6px] -start-[3px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-y-1/2 ${
+										{!isCollapsed &&
+											activeDropdown?.level2 === 'billing-account' && (
+												<div className='p-0 m-0 flex flex-col gap-0.5 relative before:absolute before:start-[32px] ps-[22px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
+													<div className='p-0 m-0 flex flex-col'>
+														<Link
+															className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 																location.pathname === '/account-invoice'
-																	? 'before:bg-[#006ae6]'
-																	: 'hover:before:bg-[#006ae6]'
-															}`}
-														></span>
-														<span
-															className={`flex items-center flex-grow text-[0.8125rem] leading-[1.125rem] font-normal ${
-																location.pathname === '/account-invoice'
-																	? 'text-[#1b84ff] font-semibold'
-																	: 'hover:!text-[#1b84ff] text-[#252F4A]'
-															}`}
+																	? 'bg-[#f9f9f9] rounded-lg'
+																	: 'hover:bg-[#f9f9f9] hover:rounded-lg'
+															} gap-[14px] ps-[10px] pe-[10px] py-[8px]`}
+															to='/account-invoice'
 														>
-															Invoice Processor
-														</span>
-													</Link>
-												</div>
-												<div className='p-0 m-0 flex flex-col'>
-													<Link
-														className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
-															location.pathname === '/invoice-history'
-																? 'bg-[#f9f9f9] rounded-lg'
-																: 'hover:bg-[#f9f9f9] hover:rounded-lg'
-														} gap-[14px] ps-[10px] pe-[10px] py-[8px]`}
-														to='/invoice-history'
-													>
-														<span
-															className={`items-center flex-shrink-0 flex w-[6px] -start-[3px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-y-1/2 ${
+															<span
+																className={`items-center flex-shrink-0 flex w-[6px] -start-[3px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-y-1/2 ${
+																	location.pathname === '/account-invoice'
+																		? 'before:bg-[#006ae6]'
+																		: 'hover:before:bg-[#006ae6]'
+																}`}
+															></span>
+															<span
+																className={`flex items-center flex-grow text-[0.8125rem] leading-[1.125rem] font-normal ${
+																	location.pathname === '/account-invoice'
+																		? 'text-[#1b84ff] font-semibold'
+																		: 'hover:!text-[#1b84ff] text-[#252F4A]'
+																}`}
+															>
+																Invoice Processor
+															</span>
+														</Link>
+													</div>
+													<div className='p-0 m-0 flex flex-col'>
+														<Link
+															className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 																location.pathname === '/invoice-history'
-																	? 'before:bg-[#006ae6]'
-																	: 'hover:before:bg-[#006ae6]'
-															}`}
-														></span>
-														<span
-															className={`flex items-center flex-grow text-[0.8125rem] leading-[1.125rem] font-normal ${
-																location.pathname === '/invoice-history'
-																	? 'text-[#1b84ff] font-semibold'
-																	: 'hover:!text-[#1b84ff] text-[#252F4A]'
-															}`}
+																	? 'bg-[#f9f9f9] rounded-lg'
+																	: 'hover:bg-[#f9f9f9] hover:rounded-lg'
+															} gap-[14px] ps-[10px] pe-[10px] py-[8px]`}
+															to='/invoice-history'
 														>
-															Invoice History
-														</span>
-													</Link>
-												</div>
-												<div className='p-0 m-0 flex flex-col'>
-													<Link
-														className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
-															location.pathname === '/invoice-delete'
-																? 'bg-[#f9f9f9] rounded-lg'
-																: 'hover:bg-[#f9f9f9] hover:rounded-lg'
-														} gap-[14px] ps-[10px] pe-[10px] py-[8px]`}
-														to='/invoice-delete'
-													>
-														<span
-															className={`items-center flex-shrink-0 flex w-[6px] -start-[3px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-y-1/2 ${
+															<span
+																className={`items-center flex-shrink-0 flex w-[6px] -start-[3px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-y-1/2 ${
+																	location.pathname === '/invoice-history'
+																		? 'before:bg-[#006ae6]'
+																		: 'hover:before:bg-[#006ae6]'
+																}`}
+															></span>
+															<span
+																className={`flex items-center flex-grow text-[0.8125rem] leading-[1.125rem] font-normal ${
+																	location.pathname === '/invoice-history'
+																		? 'text-[#1b84ff] font-semibold'
+																		: 'hover:!text-[#1b84ff] text-[#252F4A]'
+																}`}
+															>
+																Invoice History
+															</span>
+														</Link>
+													</div>
+													<div className='p-0 m-0 flex flex-col'>
+														<Link
+															className={`flex p-0 m-0 items-center cursor-pointer border border-transparent ${
 																location.pathname === '/invoice-delete'
-																	? 'before:bg-[#006ae6]'
-																	: 'hover:before:bg-[#006ae6]'
-															}`}
-														></span>
-														<span
-															className={`flex items-center flex-grow text-[0.8125rem] leading-[1.125rem] font-normal ${
-																location.pathname === '/invoice-delete'
-																	? 'text-[#1b84ff] font-semibold'
-																	: 'hover:!text-[#1b84ff] text-[#252F4A]'
-															}`}
+																	? 'bg-[#f9f9f9] rounded-lg'
+																	: 'hover:bg-[#f9f9f9] hover:rounded-lg'
+															} gap-[14px] ps-[10px] pe-[10px] py-[8px]`}
+															to='/invoice-delete'
 														>
-															Invoice Delete
-														</span>
-													</Link>
-												</div>
-												{/* <div className='p-0 m-0 flex flex-col-reverse'>
+															<span
+																className={`items-center flex-shrink-0 flex w-[6px] -start-[3px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-y-1/2 ${
+																	location.pathname === '/invoice-delete'
+																		? 'before:bg-[#006ae6]'
+																		: 'hover:before:bg-[#006ae6]'
+																}`}
+															></span>
+															<span
+																className={`flex items-center flex-grow text-[0.8125rem] leading-[1.125rem] font-normal ${
+																	location.pathname === '/invoice-delete'
+																		? 'text-[#1b84ff] font-semibold'
+																		: 'hover:!text-[#1b84ff] text-[#252F4A]'
+																}`}
+															>
+																Invoice Delete
+															</span>
+														</Link>
+													</div>
+													{/* <div className='p-0 m-0 flex flex-col-reverse'>
 													<div
 														className='p-0 m-0 flex items-center border border-transparent grow cursor-pointer gap-[5px] ps-[10px] pe-[10px] py-[8px]'
 														onClick={() => setIsExpanded(!isExpanded)}
@@ -1399,8 +1401,8 @@ function Sidebar() {
 														</div>
 													)}
 												</div> */}
-											</div>
-										)}
+												</div>
+											)}
 									</div>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
@@ -1505,7 +1507,7 @@ function Sidebar() {
 									</span>
 								)}
 							</div>
-							{activeDropdown?.level1 === 'reports' && (
+							{!isCollapsed && activeDropdown?.level1 === 'reports' && (
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
@@ -1608,7 +1610,7 @@ function Sidebar() {
 									</span>
 								)}
 							</div>
-							{activeDropdown?.level1 === 'settings' && (
+							{!isCollapsed && activeDropdown?.level1 === 'settings' && (
 								<div className='p-0 m-0 flex flex-col gap-0.5 ps-[10px] relative before:absolute before:start-[20px] before:top-0 before:bottom-0 before:border-s before:border-gray-200'>
 									<div className='p-0 m-0 flex flex-col'>
 										<Link
