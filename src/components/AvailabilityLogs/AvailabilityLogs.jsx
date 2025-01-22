@@ -17,8 +17,8 @@ const AvailabilityLogs = () => {
 	};
 
 	return (
-		<div className='flex-grow p-8 bg-gray-50 min-h-screen'>
-			<div className='max-w-4xl mx-auto bg-white shadow-md rounded-md p-6'>
+		<div className='flex-grow p-8 bg-white min-h-screen'>
+			<div className=' mx-auto bg-white rounded-md p-6'>
 				<h2 className='text-2xl font-bold text-gray-700 mb-6'>
 					Change Log of Availability #: {driverNumber}
 				</h2>
@@ -69,7 +69,7 @@ const AvailabilityLogs = () => {
 							</p>
 						</div>
 					) : (
-						<div className='p-4 bg-gray-100 border border-gray-300 rounded-md text-gray-600'>
+						<div className='p-4 bg-red-100 border border-gray-300 rounded-md text-gray-600'>
 							<p>
 								No data to display. Enter Driver Number and Date to see changes.
 							</p>
