@@ -6,17 +6,21 @@ import Sidebar from './components/Sidebar/Sidebar';
 
 function Layout() {
 	return (
-		<div className='flex h-screen'>
+		<div className="flex h-screen overflow-hidden">
 			{/* Sidebar */}
-			<Sidebar />
+			<div className="w-64 h-full">
+				<Sidebar />
+			</div>
 
 			{/* Main Content */}
-			<div className='flex-1 flex flex-col'>
+			<div className="flex-1 flex flex-col">
 				{/* Header */}
-				<Header />
+				<div className="h-16">
+					<Header />
+				</div>
 
 				{/* Outlet for Nested Routes */}
-				<div className='flex-1 overflow-auto'>
+				<div className="flex-1 overflow-auto bg-gray-50">
 					<Outlet />
 				</div>
 			</div>
