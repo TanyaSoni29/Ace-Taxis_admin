@@ -1,6 +1,5 @@
 /** @format */
 
-import Sidebar from '../Sidebar/Sidebar';
 import {
 	Button,
 	TextField,

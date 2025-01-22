@@ -1,14 +1,11 @@
 /** @format */
-import Sidebar from "../Sidebar/Sidebar";
+
 import { Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from "@mui/material";
 
 const AirportRuns = () => {
   return (
     <div className="flex h-screen bg-white">
-      {/* Sidebar */}
-      <div className="w-80 bg-white">
-        <Sidebar />
-      </div>
+     
 
       {/* Main Content */}
       <div className="flex-1 p-6 space-y-6">

@@ -1,6 +1,5 @@
 /** @format */
 
-import Sidebar from '../Sidebar/Sidebar';
 import Paper from '@mui/material/Paper';
 import { DataGrid } from '@mui/x-data-grid';
 import { Button, IconButton } from '@mui/material';
@@ -90,10 +89,6 @@ const rows = [
 function ListPoi() {
 	return (
 		<div className='flex h-screen bg-white'>
-			{/* Sidebar */}
-			<div className='w-80 bg-white'>
-				<Sidebar />
-			</div>
 
 			{/* Main Content */}
 			<div className='flex-1 p-6 space-y-6'>
